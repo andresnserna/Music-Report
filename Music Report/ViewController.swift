@@ -14,6 +14,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBOutlet weak var txt_username: UITextField!
+    @IBOutlet weak var txt_password: UITextField!
+    @IBAction func btn_signIn(_ sender: UIButton) {
+    }
+    
+    @IBAction func btn_signUp(_ sender: UIButton) {
+    }
 }
 
