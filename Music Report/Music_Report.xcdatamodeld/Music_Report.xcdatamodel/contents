@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23788.4" systemVersion="25A362" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="date_END" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date_START" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="event_description" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Music" representedClassName="Music" syncable="YES" codeGenerationType="class">
+        <attribute name="album_art_file" optional="YES" attributeType="String"/>
         <attribute name="album_name" optional="YES" attributeType="String"/>
         <attribute name="artist" optional="YES" attributeType="String"/>
+        <attribute name="in_library" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="music_ID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="play_count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="track_genre" optional="YES" attributeType="String"/>
         <attribute name="track_name" optional="YES" attributeType="String"/>
         <relationship name="to_post" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Post" inverseName="to_music" inverseEntity="Post"/>
