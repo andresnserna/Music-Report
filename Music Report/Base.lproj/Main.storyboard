@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="1777.6119402985073" y="-8.2379862700228834"/>
         </scene>
-        <!--Sign In View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="Wfi-Yz-kKc">
             <objects>
-                <viewController id="Zbt-jg-iYF" customClass="SignInViewController" customModule="Music_Report" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zbt-jg-iYF" customClass="SignUpViewController" customModule="Music_Report" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VQL-Bm-Wrq">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -802,7 +802,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="njd-77-CYo"/>
+        <segue reference="YNX-AL-q7o"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.up.forward.app" catalog="system" width="128" height="114"/>
