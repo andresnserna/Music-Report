@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class EventInfoViewController: UIViewController {
 
@@ -15,15 +16,12 @@ class EventInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var map_eventMapView: MKMapView!
+    @IBOutlet weak var lbl_eventTitle: UILabel!
+    @IBOutlet weak var lbl_eventAddress: UILabel!
+    @IBOutlet weak var lbl_eventDate: UILabel!
+    @IBOutlet weak var lbl_eventDescription: UILabel!
+    @IBAction func btn_getTickets(_ sender: Any) {
     }
-    */
-
+    
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class NearbyViewController: UIViewController {
 
@@ -15,7 +16,10 @@ class NearbyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBOutlet weak var lbl_activeUsername: UILabel!
+    @IBOutlet weak var map_MapView: MKMapView!
+    
+    @IBOutlet weak var tbl_eventItems: UITableView!
     /*
     // MARK: - Navigation
 

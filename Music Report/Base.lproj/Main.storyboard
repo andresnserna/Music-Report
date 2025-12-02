@@ -167,6 +167,7 @@
                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="btn_createUser:" destination="Zbt-jg-iYF" eventType="touchUpInside" id="UFW-zf-3ue"/>
                                     <action selector="btn_signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mfw-mt-Bcp"/>
                                     <segue destination="yc0-X5-UgP" kind="show" id="YNX-AL-q7o"/>
                                 </connections>
@@ -180,6 +181,7 @@
                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="btn_importLibrary:" destination="Zbt-jg-iYF" eventType="touchUpInside" id="Fx0-uf-06i"/>
                                     <action selector="btn_signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FY1-aL-dHs"/>
                                 </connections>
                             </button>
@@ -216,6 +218,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="x92-qT-ltO"/>
+                    <connections>
+                        <outlet property="lbl_charCountReq" destination="YzI-2B-Rdx" id="GFB-dy-2Ry"/>
+                        <outlet property="lbl_numberReq" destination="uj5-Bc-AFH" id="HXW-Sc-zvy"/>
+                        <outlet property="lbl_specialCharReq" destination="Jna-dk-GYp" id="oP4-P7-f3f"/>
+                        <outlet property="lbl_uppercaseReq" destination="S74-4Q-gxR" id="zMa-yo-B8Y"/>
+                        <outlet property="txt_newPassword" destination="ylO-V1-0HT" id="TCS-Le-SYj"/>
+                        <outlet property="txt_newUsername" destination="dy5-Ky-RIe" id="W57-Yh-zUl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPA-xU-dFr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -295,6 +305,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Nearby" image="mappin.and.ellipse" catalog="system" selectedImage="mappin.and.ellipse" id="NYL-fl-2ki"/>
+                    <connections>
+                        <outlet property="lbl_activeUsername" destination="W1k-d4-di5" id="bEU-Am-6rK"/>
+                        <outlet property="map_MapView" destination="cbV-jj-7XD" id="H1e-he-vPZ"/>
+                        <outlet property="tbl_eventItems" destination="6hI-ed-dWz" id="X5z-9v-hpc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9L-m9-8wr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -485,6 +500,33 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Stuff" image="tray.fill" catalog="system" selectedImage="tray.fill" id="FFr-qR-6uC"/>
+                    <connections>
+                        <outlet property="img_topAlbumImage1" destination="PKE-DB-fk1" id="b7I-vU-4c7"/>
+                        <outlet property="img_topAlbumImage2" destination="TpC-df-5rc" id="iM7-qX-iRG"/>
+                        <outlet property="img_topAlbumImage3" destination="b1R-LB-nUG" id="prF-Eg-uW7"/>
+                        <outlet property="img_topSongImage1" destination="UP1-Dl-c1e" id="az6-WR-5FK"/>
+                        <outlet property="img_topSongImage2" destination="iph-77-zrz" id="EOv-hy-n9N"/>
+                        <outlet property="img_topSongImage3" destination="OQj-ou-ytB" id="MSF-Ve-caD"/>
+                        <outlet property="img_topSongImage4" destination="bEu-Lg-09U" id="zsc-k5-fV8"/>
+                        <outlet property="img_topSongImage5" destination="nuv-kI-yFt" id="sYT-5Y-5Ug"/>
+                        <outlet property="lbl_activeUsername" destination="QdP-QX-j0E" id="Jkd-Po-lPT"/>
+                        <outlet property="lbl_topAlbum1" destination="wmQ-8H-Tyr" id="Ab1-8Q-PWv"/>
+                        <outlet property="lbl_topAlbum2" destination="Lkf-83-Nbp" id="g6i-zO-Cz5"/>
+                        <outlet property="lbl_topAlbum3" destination="lMy-QT-ZXf" id="zEi-Gq-UM3"/>
+                        <outlet property="lbl_topGenre1" destination="tW5-3m-Ayc" id="vYS-da-kkR"/>
+                        <outlet property="lbl_topGenre2" destination="NJ4-jL-Q0A" id="Owk-rH-ZGt"/>
+                        <outlet property="lbl_topGenre3" destination="I4q-a9-aPB" id="03N-je-bxt"/>
+                        <outlet property="lbl_topSong1" destination="A6x-7s-eaO" id="RHn-8n-fkF"/>
+                        <outlet property="lbl_topSong2" destination="zeu-PO-Dn5" id="EK2-xv-K5i"/>
+                        <outlet property="lbl_topSong3" destination="tu5-wy-b1P" id="yo4-eb-Qbv"/>
+                        <outlet property="lbl_topSong4" destination="z9l-Ac-4hI" id="gyi-4w-ltb"/>
+                        <outlet property="lbl_topSong5" destination="drv-FH-fe0" id="LBD-Wr-nZf"/>
+                        <outlet property="lbl_topSongAlbum1" destination="fZ6-dv-nb6" id="iSy-Mo-LQu"/>
+                        <outlet property="lbl_topSongAlbum2" destination="DYt-Dl-8Zo" id="TwF-OB-YQv"/>
+                        <outlet property="lbl_topSongAlbum3" destination="xst-jJ-Uvh" id="tmN-E0-pfN"/>
+                        <outlet property="lbl_topSongAlbum4" destination="Akv-kp-dwE" id="fWu-L2-AIK"/>
+                        <outlet property="lbl_topSongAlbum5" destination="hch-62-kGq" id="Agk-xV-G36"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5x-ce-fj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -512,6 +554,9 @@
                                     <segment title="Home"/>
                                     <segment title="New"/>
                                 </segments>
+                                <connections>
+                                    <action selector="seg_feedPicker:" destination="eaL-Sz-DFP" eventType="valueChanged" id="Eu2-nL-uef"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="V6E-UJ-uFG">
                                 <rect key="frame" x="0.0" y="223" width="402" height="534"/>
@@ -538,6 +583,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system"/>
                                 <connections>
+                                    <action selector="btn_newPost:" destination="eaL-Sz-DFP" eventType="touchUpInside" id="4rA-go-xRx"/>
                                     <segue destination="1PF-US-gWy" kind="show" id="kCv-Dc-dNP"/>
                                 </connections>
                             </button>
@@ -548,6 +594,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Feed" selectedImage="text.bubble.fill" catalog="system" id="cMC-wO-RO4"/>
                     <navigationItem key="navigationItem" id="ESC-tf-Ran"/>
+                    <connections>
+                        <outlet property="lbl_activeUsername" destination="GOK-wg-BCJ" id="8VC-n4-fl6"/>
+                        <outlet property="tbl_postItems" destination="V6E-UJ-uFG" id="w4U-JA-3DM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyw-nx-505" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -635,11 +685,29 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-yj-nY0">
+                                <rect key="frame" x="170" y="631" width="63" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Post!">
+                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btn_postIt:" destination="1PF-US-gWy" eventType="touchUpInside" id="j7B-c1-N7O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qFt-3J-kOg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="YZF-zq-EKp"/>
+                    <connections>
+                        <outlet property="btn_attachedMusicImage" destination="7F8-k6-bMn" id="IXD-7x-BED"/>
+                        <outlet property="lbl_attachedMusicSubtitle" destination="vKf-kp-enl" id="wSF-eq-P9N"/>
+                        <outlet property="lbl_attachedMusicTitle" destination="NTz-4T-SVk" id="z5y-Ue-eWA"/>
+                        <outlet property="txtV_postBody" destination="QgG-fy-0h9" id="kGP-6M-Chs"/>
+                        <outlet property="txt_postTitle" destination="Hvz-gL-Zpd" id="scf-v2-1y2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dF0-6A-5yH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -749,6 +817,9 @@
                                 <buttonConfiguration key="configuration" style="filled" image="arrow.up.forward.app" catalog="system" title=" Get Tickets">
                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btn_getTickets:" destination="pSa-oy-hWQ" eventType="touchUpInside" id="Lwn-Af-tnS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0o9-Xk-Efa">
                                 <rect key="frame" x="16" y="500" width="370" height="216"/>
@@ -777,6 +848,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Cc0-f7-1nJ"/>
+                    <connections>
+                        <outlet property="lbl_eventAddress" destination="U7a-Qk-4GR" id="o4M-Gx-Z4I"/>
+                        <outlet property="lbl_eventDate" destination="fcP-TB-hCL" id="iOf-ss-JNR"/>
+                        <outlet property="lbl_eventDescription" destination="0o9-Xk-Efa" id="IY6-ma-0fp"/>
+                        <outlet property="lbl_eventTitle" destination="aa0-is-sEY" id="IVe-p3-Nng"/>
+                        <outlet property="map_eventMapView" destination="x3o-1r-Iur" id="M5p-sC-J49"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sVQ-VA-Lit" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
