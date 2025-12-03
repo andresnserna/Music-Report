@@ -13,21 +13,22 @@ class NearbyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let username = activeUser {
+            lbl_activeUsername.text = "@\(username)"
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let username = activeUser {
+            lbl_activeUsername.text = "@\(username)"
+        }
     }
     
     @IBOutlet weak var lbl_activeUsername: UILabel!
     @IBOutlet weak var map_MapView: MKMapView!
     
     @IBOutlet weak var tbl_eventItems: UITableView!
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

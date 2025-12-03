@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             for existingUser in data {
                 if (existingUser.username == txt_username.text && existingUser.password == txt_password.text) {
                     let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                    let destinationViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "LandingPage")
+                    let destinationViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
                     self.present(destinationViewController, animated: true, completion: nil)
                     activeUser = existingUser.username
                     print("DEBUG: Found Username: \(existingUser.username ?? "NONE")")

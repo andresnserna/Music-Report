@@ -14,6 +14,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         activeUser = nil
+        txt_newPassword.delegate = self
+
     }
     
     @IBOutlet weak var txt_newUsername: UITextField!
@@ -21,10 +23,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBAction func btn_importLibrary(_ sender: UIButton) {
     }
     @IBAction func btn_createUser(_ sender: UIButton) {
-        //read that username and password are not empty or nil
-        if (txt_newPassword.text != nil && txt_newUsername.text != nil && txt_newPassword.text != "" && txt_newUsername.text != ""){
-            addNewUser(newUsername: txt_newUsername.text!, newPassword: txt_newPassword.text!)
+        // Check that username and password are not empty or nil
+        guard let username = txt_newUsername.text, !username.isEmpty,
+              let password = txt_newPassword.text, !password.isEmpty else {
+            showAlert(title: "Error", message: "Please fill in all fields")
+            return
         }
+        
+        // Validate password meets all requirements
+        if !isPasswordValid(password) {
+            showAlert(title: "Invalid Password", message: "Password must meet all requirements")
+            return
+        }
+        
+        //add the user to the User database
+        addNewUser(newUsername: username, newPassword: password)
+        
     }
     
     @IBOutlet weak var lbl_uppercaseReq: UILabel!
@@ -53,7 +67,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             alertTitle = "Success!"
             alertMessage = "User " + newUsername + " added successfully!"
             alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            // Navigate AFTER user taps OK
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                // Segue to the landing page VC
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                let destinationViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
+                self.present(destinationViewController, animated: true, completion: nil)
+            }))
+            
             present(alertController, animated: true, completion: nil)
             print("User added successfully")
             
@@ -73,6 +94,47 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         validatePassword(newText)
         return true
     }
+    
+    func isPasswordValid(_ password: String) -> Bool {
+        let uppercaseRegex = ".*[A-Z]+.*"
+        let numberRegex = ".*[0-9]+.*"
+        let specialCharRegex = ".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]+.*"
+        
+        let hasUppercase = NSPredicate(format: "SELF MATCHES %@", uppercaseRegex).evaluate(with: password)
+        let hasNumber = NSPredicate(format: "SELF MATCHES %@", numberRegex).evaluate(with: password)
+        let hasSpecialChar = NSPredicate(format: "SELF MATCHES %@", specialCharRegex).evaluate(with: password)
+        let hasMinLength = password.count >= 12
+        
+        return hasUppercase && hasNumber && hasSpecialChar && hasMinLength
+    }
 
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
+
+    func validatePassword(_ password: String) {
+        // Check for uppercase character
+        let uppercaseRegex = ".*[A-Z]+.*"
+        let hasUppercase = NSPredicate(format: "SELF MATCHES %@", uppercaseRegex).evaluate(with: password)
+        
+        // Check for number
+        let numberRegex = ".*[0-9]+.*"
+        let hasNumber = NSPredicate(format: "SELF MATCHES %@", numberRegex).evaluate(with: password)
+        
+        // Check for special character
+        let specialCharRegex = ".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]+.*"
+        let hasSpecialChar = NSPredicate(format: "SELF MATCHES %@", specialCharRegex).evaluate(with: password)
+        
+        // Check for character count (12+)
+        let hasMinLength = password.count >= 12
+        
+        // Update label colors based on validation
+        lbl_uppercaseReq.textColor = hasUppercase ? .systemGreen : .systemGray
+        lbl_numberReq.textColor = hasNumber ? .systemGreen : .systemGray
+        lbl_specialCharReq.textColor = hasSpecialChar ? .systemGreen : .systemGray
+        lbl_charCountReq.textColor = hasMinLength ? .systemGreen : .systemGray
+    }
 
 }

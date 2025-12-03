@@ -145,7 +145,7 @@
                                 <rect key="frame" x="44" y="364" width="314" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="name"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlK-aj-nUg">
                                 <rect key="frame" x="44" y="335" width="112" height="21"/>
@@ -529,7 +529,7 @@
         <!--My Feed-->
         <scene sceneID="v7A-67-WMf">
             <objects>
-                <viewController storyboardIdentifier="LandingPage" modalPresentationStyle="fullScreen" id="eaL-Sz-DFP" customClass="FeedViewController" customModule="Music_Report" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="eaL-Sz-DFP" customClass="FeedViewController" customModule="Music_Report" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ngi-Xn-Kbt" customClass="feed">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -766,7 +766,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="6cS-v4-3n3">
             <objects>
-                <tabBarController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="yc0-X5-UgP" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="yc0-X5-UgP" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="DD8-cw-iRe"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="B7r-Dv-221">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>

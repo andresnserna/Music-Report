@@ -12,7 +12,17 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let username = activeUser {
+            lbl_activeUsername.text = "@\(username)"
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let username = activeUser {
+            lbl_activeUsername.text = "@\(username)"
+        }
     }
     
     @IBAction func seg_feedPicker(_ sender: UISegmentedControl) {

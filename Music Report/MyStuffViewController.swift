@@ -12,7 +12,18 @@ class MyStuffViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let username = activeUser {
+            lbl_activeUsername.text = "@\(username)"
+        }
+    }
+    
+    // In FeedViewController
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let username = activeUser {
+            lbl_activeUsername.text = "@\(username)"
+        }
     }
     
     @IBOutlet weak var lbl_activeUsername: UILabel!
