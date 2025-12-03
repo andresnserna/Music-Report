@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         
         do {
             data = try context.fetch(User.fetchRequest())
+            var userFound = false
             
             for existingUser in data {
                 if (existingUser.username == txt_username.text && existingUser.password == txt_password.text) {
@@ -39,21 +40,22 @@ class ViewController: UIViewController {
                     self.present(destinationViewController, animated: true, completion: nil)
                     activeUser = existingUser.username
                     print("DEBUG: Found Username: \(existingUser.username ?? "NONE")")
-                    return
-                } else {
-                    //present "incorrect username/password" pop up
-                    print("DEBUG: No Username Found: \(existingUser.username ?? "NONE")")
-                    alertTitle = "Incorrect"
-                    alertMessage = "Username or password incorrect"
-                    alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    present(alertController, animated: true, completion: nil)
-                    return
+                    userFound = true
+                    break  // Exit loop once we find a match
                 }
+            }
+            
+            if !userFound {
+                print("DEBUG: No matching username/password found")
+                alertTitle = "Incorrect"
+                alertMessage = "Username or password incorrect"
+                alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alertController, animated: true, completion: nil)
             }
         }
         catch {
-            //preent error pop up
+            // Present error pop up
             alertTitle = "Error"
             alertMessage = "Error fetching data: \(error)"
             alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
