@@ -6,20 +6,62 @@
 //
 
 import UIKit
+import CoreData
+
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+let context = appDelegate.persistentContainer.viewContext
+var activeUser : String? = nil
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        activeUser = nil
     }
 
     @IBOutlet weak var txt_username: UITextField!
     @IBOutlet weak var txt_password: UITextField!
-    @IBAction func btn_signIn(_ sender: UIButton) {
+    @IBAction func btn_musicSignUp(_ sender: UIButton) {
+    }
+    @IBAction func btn_musicSignIn(_ sender: UIButton) {
+        var data = [User]()
+        var alertTitle : String = ""
+        var alertMessage : String = ""
+        var alertController : UIAlertController!
+        
+        do {
+            data = try context.fetch(User.fetchRequest())
+            
+            for existingUser in data {
+                if (existingUser.username == txt_username.text && existingUser.password == txt_password.text) {
+                    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                    let destinationViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "LandingPage")
+                    self.present(destinationViewController, animated: true, completion: nil)
+                    activeUser = existingUser.username
+                    print("DEBUG: Found Username: \(existingUser.username ?? "NONE")")
+                    return
+                } else {
+                    //present "incorrect username/password" pop up
+                    print("DEBUG: No Username Found: \(existingUser.username ?? "NONE")")
+                    alertTitle = "Incorrect"
+                    alertMessage = "Username or password incorrect"
+                    alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    present(alertController, animated: true, completion: nil)
+                    return
+                }
+            }
+        }
+        catch {
+            //preent error pop up
+            alertTitle = "Error"
+            alertMessage = "Error fetching data: \(error)"
+            alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+            print("Error fetching data: \(error)")
+        }
     }
     
-    @IBAction func btn_signUp(_ sender: UIButton) {
-    }
 }
 

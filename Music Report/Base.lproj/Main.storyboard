@@ -43,48 +43,44 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLd-mX-SMg">
-                                        <rect key="frame" x="189" y="105" width="133" height="35"/>
-                                        <color key="tintColor" name="AccentColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Sign In">
-                                            <color key="baseBackgroundColor" name="AccentColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="btn_signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fM2-de-JTD"/>
-                                            <segue destination="yc0-X5-UgP" kind="show" id="njd-77-CYo"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbp-UJ-UwZ">
-                                        <rect key="frame" x="48" y="105" width="133" height="35"/>
-                                        <color key="tintColor" name="AccentColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Sign Up">
-                                            <color key="baseBackgroundColor" name="AccentColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="btn_signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KhO-ST-eOm"/>
-                                            <segue destination="Zbt-jg-iYF" kind="show" id="R8b-Gt-viM"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="D92-dd-lyr" secondAttribute="trailing" constant="30" id="0wG-Qn-zQd"/>
-                                    <constraint firstItem="jbp-UJ-UwZ" firstAttribute="leading" secondItem="TLd-mX-SMg" secondAttribute="trailing" constant="-274" id="2kY-sN-UyM"/>
-                                    <constraint firstAttribute="trailing" secondItem="jbp-UJ-UwZ" secondAttribute="trailing" constant="189" id="6rK-Oo-yEc"/>
-                                    <constraint firstItem="TLd-mX-SMg" firstAttribute="width" secondItem="jbp-UJ-UwZ" secondAttribute="width" id="7zv-bv-QBE"/>
-                                    <constraint firstItem="TLd-mX-SMg" firstAttribute="baseline" secondItem="jbp-UJ-UwZ" secondAttribute="baseline" id="E7G-ts-Fm7"/>
                                     <constraint firstItem="HTX-Xi-3Co" firstAttribute="top" secondItem="5hK-Q7-bS3" secondAttribute="top" constant="10" id="G0k-x2-QPb"/>
                                     <constraint firstItem="D92-dd-lyr" firstAttribute="top" secondItem="HTX-Xi-3Co" secondAttribute="bottom" constant="16" id="O4E-b2-8M2"/>
                                     <constraint firstItem="D92-dd-lyr" firstAttribute="leading" secondItem="5hK-Q7-bS3" secondAttribute="leading" constant="30" id="TG9-WN-mmP"/>
-                                    <constraint firstItem="TLd-mX-SMg" firstAttribute="leading" secondItem="5hK-Q7-bS3" secondAttribute="leading" constant="189" id="YSb-M0-lJl"/>
                                     <constraint firstItem="HTX-Xi-3Co" firstAttribute="leading" secondItem="5hK-Q7-bS3" secondAttribute="leading" constant="30" id="gz7-rE-Fef"/>
-                                    <constraint firstItem="jbp-UJ-UwZ" firstAttribute="top" secondItem="D92-dd-lyr" secondAttribute="bottom" constant="11" id="tAD-om-Le9"/>
-                                    <constraint firstItem="TLd-mX-SMg" firstAttribute="top" secondItem="D92-dd-lyr" secondAttribute="bottom" constant="11" id="uvh-Qv-KhS"/>
                                     <constraint firstAttribute="trailing" secondItem="HTX-Xi-3Co" secondAttribute="trailing" constant="30" id="y5t-sp-E0o"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNg-Cg-Xs8">
+                                <rect key="frame" x="205" y="509" width="133" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign In">
+                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btn_createUser:" destination="Zbt-jg-iYF" eventType="touchUpInside" id="OEd-xC-vdc"/>
+                                    <action selector="btn_musicSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="atH-fc-QPh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAk-Bx-5qD">
+                                <rect key="frame" x="65" y="509" width="133" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Sign Up">
+                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btn_importLibrary:" destination="Zbt-jg-iYF" eventType="touchUpInside" id="vUf-vF-02B"/>
+                                    <action selector="btn_musicSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjq-CS-5Z8"/>
+                                    <segue destination="Zbt-jg-iYF" kind="show" id="WzM-5D-bBV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -168,7 +164,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="btn_createUser:" destination="Zbt-jg-iYF" eventType="touchUpInside" id="UFW-zf-3ue"/>
-                                    <action selector="btn_signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mfw-mt-Bcp"/>
                                     <segue destination="yc0-X5-UgP" kind="show" id="YNX-AL-q7o"/>
                                 </connections>
                             </button>
@@ -182,7 +177,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="btn_importLibrary:" destination="Zbt-jg-iYF" eventType="touchUpInside" id="Fx0-uf-06i"/>
-                                    <action selector="btn_signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FY1-aL-dHs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*Password must be longer than 12 characters." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzI-2B-Rdx">
@@ -535,7 +529,7 @@
         <!--My Feed-->
         <scene sceneID="v7A-67-WMf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="eaL-Sz-DFP" customClass="FeedViewController" customModule="Music_Report" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LandingPage" modalPresentationStyle="fullScreen" id="eaL-Sz-DFP" customClass="FeedViewController" customModule="Music_Report" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ngi-Xn-Kbt" customClass="feed">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -879,9 +873,6 @@
             <point key="canvasLocation" x="858.20895522388059" y="-8.2379862700228834"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="YNX-AL-q7o"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.up.forward.app" catalog="system" width="128" height="114"/>
         <image name="mappin.and.ellipse" catalog="system" width="110" height="128"/>
