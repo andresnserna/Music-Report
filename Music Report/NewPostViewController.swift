@@ -14,9 +14,7 @@ class NewPostViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    @IBOutlet weak var txt_postTitle: UITextField!
-    
+        
     @IBOutlet weak var txtV_postBody: UITextView!
     
     @IBOutlet weak var btn_attachedMusicImage: UIButton!
