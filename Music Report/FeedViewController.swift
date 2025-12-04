@@ -50,6 +50,16 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let username = activeUser {
             lbl_activeUsername.text = "@\(username)"
         }
+        
+        // Set up table view
+        tbl_postItems.dataSource = self
+        tbl_postItems.delegate = self
+        
+        // Load posts from JSON into Core Data (do this once)
+        loadPostsFromJSON()
+        
+        // Load posts from Core Data to display
+        refreshPosts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,13 +68,16 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let username = activeUser {
             lbl_activeUsername.text = "@\(username)"
         }
+        
+        refreshPosts()
+
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
             return 1
     }
     
-    func loadPosts() {
+    func refreshPosts() {
         let fetchRequest: NSFetchRequest<Post> = Post.fetchRequest()
         
         // Add sorting by date (newest first)
@@ -82,10 +95,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Filter posts based on segment selection
         if sender.selectedSegmentIndex == 0 {
             // Home feed - show all posts
-            loadPosts()
         } else {
             // New feed - maybe filter by recent or followed users
-            loadPosts()
         }
     }
     @IBAction func btn_newPost(_ sender: UIButton) {

@@ -8,15 +8,33 @@
 import Foundation
 
 struct Post_fromJSON: Codable {
-    //can i name this "Post"? it says that's invalid redeclaration
+    let post_ID: String
+    let username: String
+    let post_type: String
+    let text: String?
+    let date: String  // ISO8601 date string
+    let music_ID: String?
 }
 
 struct Music_fromJSON: Codable {
-    
+    let music_ID: String
+    let artist: String
+    let album_name: String
+    let track_name: String
+    let track_genre: String
+    let album_art_file: String
+    let in_library: Bool
+    let play_count: Int?
 }
 
 struct Events_fromJSON: Codable {
-    
+    let name: String
+    let event_description: String
+    let address: String
+    let date_START: String  // ISO8601 date string
+    let date_END: String    // ISO8601 date string
+    let hot_event: Bool
+
 }
 
 func loadPosts() -> [Post_fromJSON] {

@@ -5,6 +5,9 @@
         <attribute name="date_END" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="date_START" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="event_description" optional="YES" attributeType="String"/>
+        <attribute name="event_LAT" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="event_LON" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="hot_event" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Music" representedClassName="Music" syncable="YES" codeGenerationType="class">
