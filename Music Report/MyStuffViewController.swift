@@ -8,7 +8,9 @@
 import UIKit
 
 class MyStuffViewController: UIViewController {
-
+    
+    var music: Music_fromJSON?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,9 +27,8 @@ class MyStuffViewController: UIViewController {
             lbl_activeUsername.text = "@\(username)"
         }
     }
-    
+        
     @IBOutlet weak var lbl_activeUsername: UILabel!
-    
     
     //TOP GENRES
     @IBOutlet weak var lbl_topGenre1: UILabel!
@@ -65,5 +66,57 @@ class MyStuffViewController: UIViewController {
     @IBOutlet weak var lbl_topAlbum3: UILabel!
     @IBOutlet weak var img_topAlbumImage3: UIImageView!
 
+    func populateLabels() {
+        guard let music = music else { print("error loading music from JSON"); return }
 
+        //grab top 3 genres from this finder function, and their image strings
+        let myTop3Genres: [String] = top3Genres(music: music)
+
+        //grab top 5 songs from this finder function
+        let myTop5Songs: [String] = top5Songs(music: music)
+                
+        //grab top 3 albums from this finder function
+        let myTop3Albums: [String] = top3Albums(music: music)
+        
+        //populate the genre labels
+        lbl_topGenre1.text = myTop3Genres[0]
+        lbl_topGenre2.text = myTop3Genres[1]
+        lbl_topGenre3.text = myTop3Genres[2]
+        
+        //populate the song labels
+        lbl_topSong1.text = myTop5Songs[0]
+        lbl_topSong2.text = myTop5Songs[1]
+        lbl_topSong3.text = myTop5Songs[2]
+        lbl_topSong4.text = myTop5Songs[3]
+        lbl_topSong5.text = myTop5Songs[4]
+
+        //populate the album labels
+        lbl_topAlbum1.text = myTop3Albums[0]
+        lbl_topAlbum2.text = myTop3Albums[1]
+        lbl_topAlbum3.text = myTop3Albums[2]
+    }
+    
+    func top3Genres(music: Music_fromJSON?) -> [String] {
+        var myTop3Genres: [String] = []
+        
+        //query the json database
+        
+        return myTop3Genres
+    }
+    
+    func top5Songs(music: Music_fromJSON?) -> [String] {
+        var myTop5Songs: [String] = []
+        
+        //query the json database
+
+        return myTop5Songs
+    }
+    
+    func top3Albums(music: Music_fromJSON?) -> [String] {
+        var myTop3Albums: [String] = []
+        
+        //query the json database
+
+        return myTop3Albums
+    }
 }
