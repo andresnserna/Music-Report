@@ -18,30 +18,56 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
-
-        // Determine which cell type to use based on post_type
-        let cellIdentifier: String
         
         switch post.post_type {
         case "text":
-            cellIdentifier = "TextPostCell"
-        case "music":
-            cellIdentifier = "MusicPostCell"
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TextPostCell", for: indexPath) as? TextPostCell else {
+                print("ERROR: Could not dequeue TextPostCell")
+                return UITableViewCell()
+            }
+            cell.configure(with: post)
+            return cell
+            
+        case "song":
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SongPostCell", for: indexPath) as? SongPostCell else {
+                print("ERROR: Could not dequeue SongPostCell")
+                return UITableViewCell()
+            }
+            
+            // Load music data
+            var musicData: Music_fromJSON? = nil
+            if let musicID = post.music_ID {
+                let allMusic = loadMusic()
+                musicData = allMusic.first { $0.music_ID == musicID }
+            }
+            
+            cell.configure(with: post, music: musicData)
+            return cell
+            
         case "album":
-            cellIdentifier = "AlbumPostCell"
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumPostCell", for: indexPath) as? AlbumPostCell else {
+                print("ERROR: Could not dequeue AlbumPostCell")
+                return UITableViewCell()
+            }
+            
+            // Load music data
+            var musicData: Music_fromJSON? = nil
+            if let musicID = post.music_ID {
+                let allMusic = loadMusic()
+                musicData = allMusic.first { $0.music_ID == musicID }
+            }
+            
+            cell.configure(with: post, music: musicData)
+            return cell
+            
         default:
-            cellIdentifier = "TextPostCell"  // Default fallback
+            // Fallback to text cell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TextPostCell", for: indexPath) as? TextPostCell else {
+                return UITableViewCell()
+            }
+            cell.configure(with: post)
+            return cell
         }
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        
-        // Configure the cell based on type
-        // You'll customize this based on your cell design
-        if let textLabel = cell.textLabel {
-            textLabel.text = post.text
-        }
-        
-        return cell
     }
     
     override func viewDidLoad() {
@@ -77,6 +103,41 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             return 1
     }
     
+    func loadPostsFromJSON() {
+        // Check if posts already exist in Core Data
+        let fetchRequest: NSFetchRequest<Post> = Post.fetchRequest()
+        let existingPostCount = (try? context.count(for: fetchRequest)) ?? 0
+        
+        if existingPostCount > 0 {
+            print("Posts already loaded in Core Data")
+            return
+        }
+        
+        // Load posts from JSON
+        let jsonPosts = loadPosts()
+        
+        for jsonPost in jsonPosts {
+            let newPost = Post(context: context)
+            newPost.post_ID = UUID(uuidString: jsonPost.post_ID)
+            newPost.username = jsonPost.username
+            newPost.post_type = jsonPost.post_type
+            newPost.text = jsonPost.text
+            newPost.music_ID = jsonPost.music_ID
+            
+            // Convert ISO8601 date
+            let dateFormatter = ISO8601DateFormatter()
+            newPost.date = dateFormatter.date(from: jsonPost.date)
+        }
+        
+        // Save to Core Data
+        do {
+            try context.save()
+            print("Successfully loaded \(jsonPosts.count) posts from JSON")
+        } catch {
+            print("Error saving posts to Core Data: \(error)")
+        }
+    }
+    
     func refreshPosts() {
         let fetchRequest: NSFetchRequest<Post> = Post.fetchRequest()
         
@@ -94,9 +155,17 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func seg_feedPicker(_ sender: UISegmentedControl) {
         // Filter posts based on segment selection
         if sender.selectedSegmentIndex == 0 {
-            // Home feed - show all posts
+            // Home feed - show posts of music only in library
+            
+            //will impl later
+            refreshPosts()
+
         } else {
-            // New feed - maybe filter by recent or followed users
+            // New feed - show posts only of music not in library
+            
+            //will impl later
+            refreshPosts()
+
         }
     }
     @IBAction func btn_newPost(_ sender: UIButton) {

@@ -557,7 +557,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextPostCell" rowHeight="138" id="rqw-UT-24S">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextPostCell" rowHeight="138" id="rqw-UT-24S" customClass="TextPostCell" customModule="Music_Report" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="402" height="138"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rqw-UT-24S" id="yK7-q2-9L7">
@@ -587,8 +587,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbl_date" destination="5Sn-Ua-O36" id="cj7-dJ-4vx"/>
+                                            <outlet property="lbl_postText" destination="2RT-j3-LV1" id="gzw-kS-6VD"/>
+                                            <outlet property="lbl_username" destination="lJf-MD-jQ4" id="kpc-Il-kRp"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SongPostCell" rowHeight="217" id="hGT-RD-1xC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SongPostCell" rowHeight="217" id="hGT-RD-1xC" customClass="SongPostCell" customModule="Music_Report" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="188" width="402" height="217"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hGT-RD-1xC" id="lRq-f5-wRe">
@@ -636,8 +641,16 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img_albumArt" destination="G0e-Lc-TFE" id="I61-hu-cDd"/>
+                                            <outlet property="lbl_albumName" destination="ynb-cq-0m4" id="q7D-tf-Mn9"/>
+                                            <outlet property="lbl_date" destination="zqU-Gs-Zy3" id="QOm-9e-xZU"/>
+                                            <outlet property="lbl_postText" destination="3q2-lJ-VKq" id="tn6-rM-5Oo"/>
+                                            <outlet property="lbl_songName" destination="Ynq-IL-mFD" id="IQ0-xE-ewJ"/>
+                                            <outlet property="lbl_username" destination="WW2-md-ubB" id="igO-nQ-hhL"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AlbumPostCell" rowHeight="217" id="mce-u5-QSA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AlbumPostCell" rowHeight="217" id="mce-u5-QSA" customClass="AlbumPostCell" customModule="Music_Report" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="405" width="402" height="217"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mce-u5-QSA" id="Klr-0T-P27">
@@ -685,6 +698,14 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img_albumArt" destination="ee9-mu-Ykv" id="kZS-Vl-sTl"/>
+                                            <outlet property="lbl_albumName" destination="lH4-eN-N8J" id="QvR-GR-DlX"/>
+                                            <outlet property="lbl_artistName" destination="cRu-am-LWQ" id="nmU-Mx-vRp"/>
+                                            <outlet property="lbl_date" destination="ISE-IH-hbq" id="mFJ-Yr-lvp"/>
+                                            <outlet property="lbl_postText" destination="Aj4-tC-wdY" id="wEO-Zw-hLX"/>
+                                            <outlet property="lbl_username" destination="Xq2-S2-3sJ" id="ggX-eu-vwV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
