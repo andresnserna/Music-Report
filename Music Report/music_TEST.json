@@ -1,0 +1,489 @@
+[
+  {
+    "music_ID": "M-001",
+    "artist": "The Weeknd",
+    "album_name": "After Hours",
+    "track_name": "Blinding Lights",
+    "track_genre": "Synth-Pop",
+    "album_art_file": "M-001.jpg",
+    "in_library": true,
+    "play_count": 158
+  },
+  {
+    "music_ID": "M-002",
+    "artist": "Daft Punk",
+    "album_name": "Discovery",
+    "track_name": "One More Time",
+    "track_genre": "Electronic",
+    "album_art_file": "M-002.jpg",
+    "in_library": true,
+    "play_count": 210
+  },
+  {
+    "music_ID": "M-003",
+    "artist": "Kendrick Lamar",
+    "album_name": "To Pimp a Butterfly",
+    "track_name": "Alright",
+    "track_genre": "Hip Hop",
+    "album_art_file": "M-003.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-004",
+    "artist": "Tame Impala",
+    "album_name": "Currents",
+    "track_name": "The Less I Know The Better",
+    "track_genre": "Psychedelic Rock",
+    "album_art_file": "M-004.jpg",
+    "in_library": true,
+    "play_count": 92
+  },
+  {
+    "music_ID": "M-005",
+    "artist": "Creative: Astral Drifter",
+    "album_name": "Celestial Transit",
+    "track_name": "Echoes of the Void",
+    "track_genre": "Ambient",
+    "album_art_file": "M-005.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-006",
+    "artist": "Creative: DJ Byte",
+    "album_name": "Binary Rhythms",
+    "track_name": "Server Meltdown (Rave Mix)",
+    "track_genre": "Techno",
+    "album_art_file": "M-006.jpg",
+    "in_library": true,
+    "play_count": 31
+  },
+  {
+    "music_ID": "M-007",
+    "artist": "Creative: The Medieval Minstrels",
+    "album_name": "Dragon's Lullaby",
+    "track_name": "The Knight's Lament",
+    "track_genre": "Folk/Acoustic",
+    "album_art_file": "M-007.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-008",
+    "artist": "Creative: Neon Sunset Drive",
+    "album_name": "Gridlock Groove",
+    "track_name": "Turbo Encabulator",
+    "track_genre": "Synthwave",
+    "album_art_file": "M-008.jpg",
+    "in_library": true,
+    "play_count": 55
+  },
+  {
+    "music_ID": "M-009",
+    "artist": "Creative: Doom Squad",
+    "album_name": "Iron Tomb",
+    "track_name": "Chainsaw Symphony",
+    "track_genre": "Death Metal",
+    "album_art_file": "M-009.jpg",
+    "in_library": true,
+    "play_count": 199
+  },
+  {
+    "music_ID": "M-010",
+    "artist": "Creative: Lo-Fi Study Beats",
+    "album_name": "Rainy Day Haze",
+    "track_name": "Coffee Steam and Calculus",
+    "track_genre": "Lo-Fi Hip Hop",
+    "album_art_file": "M-010.jpg",
+    "in_library": true,
+    "play_count": 235
+  },
+  {
+    "music_ID": "M-011",
+    "artist": "Taylor Swift",
+    "album_name": "1989",
+    "track_name": "Style",
+    "track_genre": "Pop",
+    "album_art_file": "M-011.jpg",
+    "in_library": true,
+    "play_count": 63
+  },
+  {
+    "music_ID": "M-012",
+    "artist": "Radiohead",
+    "album_name": "OK Computer",
+    "track_name": "Paranoid Android",
+    "track_genre": "Alternative Rock",
+    "album_art_file": "M-012.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-013",
+    "artist": "Etta James",
+    "album_name": "At Last!",
+    "track_name": "At Last",
+    "track_genre": "Blues",
+    "album_art_file": "M-013.jpg",
+    "in_library": true,
+    "play_count": 8
+  },
+  {
+    "music_ID": "M-014",
+    "artist": "Childish Gambino",
+    "album_name": "Awaken, My Love!",
+    "track_name": "Redbone",
+    "track_genre": "Funk",
+    "album_art_file": "M-014.jpg",
+    "in_library": true,
+    "play_count": 144
+  },
+  {
+    "music_ID": "M-015",
+    "artist": "Frank Ocean",
+    "album_name": "Blonde",
+    "track_name": "Nikes",
+    "track_genre": "R&B",
+    "album_art_file": "M-015.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-016",
+    "artist": "Red Hot Chili Peppers",
+    "album_name": "Californication",
+    "track_name": "Scar Tissue",
+    "track_genre": "Alt Rock",
+    "album_art_file": "M-016.jpg",
+    "in_library": true,
+    "play_count": 19
+  },
+  {
+    "music_ID": "M-017",
+    "artist": "The Beatles",
+    "album_name": "Abbey Road",
+    "track_name": "Here Comes the Sun",
+    "track_genre": "Pop/Rock",
+    "album_art_file": "M-017.jpg",
+    "in_library": true,
+    "play_count": 168
+  },
+  {
+    "music_ID": "M-018",
+    "artist": "Creative: K-Pop Kings",
+    "album_name": "Seoul Fire",
+    "track_name": "Dynamite Bounce",
+    "track_genre": "K-Pop",
+    "album_art_file": "M-018.jpg",
+    "in_library": true,
+    "play_count": 201
+  },
+  {
+    "music_ID": "M-019",
+    "artist": "Amy Winehouse",
+    "album_name": "Back to Black",
+    "track_name": "Rehab",
+    "track_genre": "R&B/Soul",
+    "album_art_file": "M-019.jpg",
+    "in_library": true,
+    "play_count": 71
+  },
+  {
+    "music_ID": "M-020",
+    "artist": "Arctic Monkeys",
+    "album_name": "AM",
+    "track_name": "Do I Wanna Know?",
+    "track_genre": "Indie Rock",
+    "album_art_file": "M-020.jpg",
+    "in_library": true,
+    "play_count": 175
+  },
+  {
+    "music_ID": "M-021",
+    "artist": "Beyoncé",
+    "album_name": "I Am... Sasha Fierce",
+    "track_name": "Single Ladies (Put a Ring on It)",
+    "track_genre": "Pop",
+    "album_art_file": "M-021.jpg",
+    "in_library": true,
+    "play_count": 28
+  },
+  {
+    "music_ID": "M-022",
+    "artist": "Creative: Salsa Loca",
+    "album_name": "Midnight Mambo",
+    "track_name": "El Ritmo Es Fuego",
+    "track_genre": "Latin",
+    "album_art_file": "M-022.jpg",
+    "in_library": true,
+    "play_count": 97
+  },
+  {
+    "music_ID": "M-023",
+    "artist": "Adele",
+    "album_name": "21",
+    "track_name": "Rolling in the Deep",
+    "track_genre": "Pop/Soul",
+    "album_art_file": "M-023.jpg",
+    "in_library": true,
+    "play_count": 39
+  },
+  {
+    "music_ID": "M-024",
+    "artist": "Hans Zimmer",
+    "album_name": "Inception (Original Motion Picture Soundtrack)",
+    "track_name": "Time",
+    "track_genre": "Score",
+    "album_art_file": "M-024.jpg",
+    "in_library": true,
+    "play_count": 16
+  },
+  {
+    "music_ID": "M-025",
+    "artist": "Elton John",
+    "album_name": "Goodbye Yellow Brick Road",
+    "track_name": "Bennie and the Jets",
+    "track_genre": "Pop Rock",
+    "album_art_file": "M-025.jpg",
+    "in_library": true,
+    "play_count": 185
+  },
+  {
+    "music_ID": "M-026",
+    "artist": "Creative: Jazz Cereal",
+    "album_name": "Smooth Operators",
+    "track_name": "Monday Morning Quarterback",
+    "track_genre": "Smooth Jazz",
+    "album_art_file": "M-026.jpg",
+    "in_library": true,
+    "play_count": 42
+  },
+  {
+    "music_ID": "M-027",
+    "artist": "Creative: The Quantum Tunnels",
+    "album_name": "Spooky Action",
+    "track_name": "Entangled State",
+    "track_genre": "IDM",
+    "album_art_file": "M-027.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-028",
+    "artist": "Nirvana",
+    "album_name": "Nevermind",
+    "track_name": "Smells Like Teen Spirit",
+    "track_genre": "Grunge",
+    "album_art_file": "M-028.jpg",
+    "in_library": true,
+    "play_count": 305
+  },
+  {
+    "music_ID": "M-029",
+    "artist": "Fleetwood Mac",
+    "album_name": "Rumours",
+    "track_name": "Dreams",
+    "track_genre": "Soft Rock",
+    "album_art_file": "M-029.jpg",
+    "in_library": true,
+    "play_count": 51
+  },
+  {
+    "music_ID": "M-030",
+    "artist": "Creative: Galactic Pirate",
+    "album_name": "Nebula Noir",
+    "track_name": "Looting Asteroids",
+    "track_genre": "Experimental",
+    "album_art_file": "M-030.jpg",
+    "in_library": true,
+    "play_count": 12
+  },
+  {
+    "music_ID": "M-031",
+    "artist": "Billie Eilish",
+    "album_name": "When We All Fall Asleep, Where Do We Go?",
+    "track_name": "Bad Guy",
+    "track_genre": "Electropop",
+    "album_art_file": "M-031.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-032",
+    "artist": "Queen",
+    "album_name": "A Night at the Opera",
+    "track_name": "Bohemian Rhapsody",
+    "track_genre": "Rock",
+    "album_art_file": "M-032.jpg",
+    "in_library": true,
+    "play_count": 277
+  },
+  {
+    "music_ID": "M-033",
+    "artist": "Creative: Indie Kid Co-op",
+    "album_name": "Rooftop Sessions",
+    "track_name": "Summer Fades",
+    "track_genre": "Indie Pop",
+    "album_art_file": "M-033.jpg",
+    "in_library": true,
+    "play_count": 88
+  },
+  {
+    "music_ID": "M-034",
+    "artist": "Creative: Underground Monks",
+    "album_name": "Zen and the Art of Beekeeping",
+    "track_name": "Honey Comb Rites",
+    "track_genre": "Drone Ambient",
+    "album_art_file": "M-034.jpg",
+    "in_library": true,
+    "play_count": 6
+  },
+  {
+    "music_ID": "M-035",
+    "artist": "Rihanna",
+    "album_name": "Anti",
+    "track_name": "Work",
+    "track_genre": "Dancehall",
+    "album_art_file": "M-035.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-036",
+    "artist": "Vivaldi",
+    "album_name": "The Four Seasons",
+    "track_name": "Spring (Allegro)",
+    "track_genre": "Classical",
+    "album_art_file": "M-036.jpg",
+    "in_library": true,
+    "play_count": 7
+  },
+  {
+    "music_ID": "M-037",
+    "artist": "Jimi Hendrix",
+    "album_name": "Are You Experienced",
+    "track_name": "Purple Haze",
+    "track_genre": "Psychedelic Rock",
+    "album_art_file": "M-037.jpg",
+    "in_library": true,
+    "play_count": 133
+  },
+  {
+    "music_ID": "M-038",
+    "artist": "Creative: The Dust Bunnies",
+    "album_name": "Attic Jams",
+    "track_name": "Forgotten Tape Loop",
+    "track_genre": "Noise Pop",
+    "album_art_file": "M-038.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-039",
+    "artist": "Creative: Midnight Train",
+    "album_name": "Railroad Regrets",
+    "track_name": "Track 9 (The Last Stop)",
+    "track_genre": "Country",
+    "album_art_file": "M-039.jpg",
+    "in_library": true,
+    "play_count": 21
+  },
+  {
+    "music_ID": "M-040",
+    "artist": "SZA",
+    "album_name": "Ctrl",
+    "track_name": "The Weekend",
+    "track_genre": "R&B",
+    "album_art_file": "M-040.jpg",
+    "in_library": true,
+    "play_count": 96
+  },
+  {
+    "music_ID": "M-041",
+    "artist": "Creative: Space Bar Aliens",
+    "album_name": "Cosmic Hangout",
+    "track_name": "Interstellar Mojito",
+    "track_genre": "Future Funk",
+    "album_art_file": "M-041.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-042",
+    "artist": "Creative: The Glitch Artists",
+    "album_name": "Broken Code",
+    "track_name": "Syntax Error Loop",
+    "track_genre": "Glitch Pop",
+    "album_art_file": "M-042.jpg",
+    "in_library": true,
+    "play_count": 105
+  },
+  {
+    "music_ID": "M-043",
+    "artist": "Bob Marley & The Wailers",
+    "album_name": "Legend",
+    "track_name": "Three Little Birds",
+    "track_genre": "Reggae",
+    "album_art_file": "M-043.jpg",
+    "in_library": true,
+    "play_count": 48
+  },
+  {
+    "music_ID": "M-044",
+    "artist": "Creative: Cybernetic Samurai",
+    "album_name": "Katana Protocol",
+    "track_name": "Neon Dawn Duel",
+    "track_genre": "Industrial",
+    "album_art_file": "M-044.jpg",
+    "in_library": true,
+    "play_count": 177
+  },
+  {
+    "music_ID": "M-045",
+    "artist": "Coldplay",
+    "album_name": "A Rush of Blood to the Head",
+    "track_name": "Clocks",
+    "track_genre": "Alternative Rock",
+    "album_art_file": "M-045.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-046",
+    "artist": "Creative: 8-Bit Hero",
+    "album_name": "Game Over EP",
+    "track_name": "Level 3 Boss Fight",
+    "track_genre": "Chiptune",
+    "album_art_file": "M-046.jpg",
+    "in_library": true,
+    "play_count": 220
+  },
+  {
+    "music_ID": "M-047",
+    "artist": "Aretha Franklin",
+    "album_name": "Lady Soul",
+    "track_name": "Respect",
+    "track_genre": "Soul",
+    "album_art_file": "M-047.jpg",
+    "in_library": true,
+    "play_count": 33
+  },
+  {
+    "music_ID": "M-048",
+    "artist": "Creative: Desert Drifters",
+    "album_name": "Sand Dune Blues",
+    "track_name": "The Sun Is A Furnace",
+    "track_genre": "Stoner Rock",
+    "album_art_file": "M-048.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-049",
+    "artist": "Mac Miller",
+    "album_name": "Swimming",
+    "track_name": "Self Care",
+    "track_genre": "Hip Hop",
+    "album_art_file": "M-049.jpg",
+    "in_library": true,
+    "play_count": 169
+  },
+  {
+    "music_ID": "M-050",
+    "artist": "Creative: Dream Weaver",
+    "album_name": "Silent Cinema",
+    "track_name": "The Final Scene",
+    "track_genre": "Cinematic",
+    "album_art_file": "M-050.jpg",
+    "in_library": false
+  }
+]

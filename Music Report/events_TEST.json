@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Neon Nights Festival",
+    "event_description": "A 3-day electronic music experience under the stars.",
+    "address": "123 desert Highway, Indio, CA",
+    "date_START": "2024-04-12T14:00:00Z",
+    "date_END": "2024-04-15T02:00:00Z"
+  },
+  {
+    "name": "Jazz in the Park",
+    "event_description": "Local jazz quartets playing free for the community.",
+    "address": "Central Park Pavilion, New York, NY",
+    "date_START": "2024-05-20T11:00:00Z",
+    "date_END": "2024-05-20T18:00:00Z"
+  },
+  {
+    "name": "The Weeknd: After Hours Tour",
+    "event_description": "World tour stop featuring special guests.",
+    "address": "SoFi Stadium, Inglewood, CA",
+    "date_START": "2024-06-15T19:00:00Z",
+    "date_END": "2024-06-15T23:30:00Z"
+  },
+  {
+    "name": "Indie Rock Showcase",
+    "event_description": "Discover the best up-and-coming indie bands from the PNW.",
+    "address": "The Crocodile, Seattle, WA",
+    "date_START": "2024-03-10T20:00:00Z",
+    "date_END": "2024-03-11T01:00:00Z"
+  },
+  {
+    "name": "Symphony Under the Stars",
+    "event_description": "The City Orchestra performs Vivaldi and Mozart.",
+    "address": "Hollywood Bowl, Los Angeles, CA",
+    "date_START": "2024-07-04T19:30:00Z",
+    "date_END": "2024-07-04T22:00:00Z"
+  },
+  {
+    "name": "Techno Bunker Rave",
+    "event_description": "Underground warehouse party. Location revealed day-of.",
+    "address": "Secret Location, Berlin, DE",
+    "date_START": "2024-08-19T23:00:00Z",
+    "date_END": "2024-08-20T08:00:00Z"
+  },
+  {
+    "name": "Country Roads Music Fest",
+    "event_description": "BBQ, Beer, and Banjoes.",
+    "address": "Nashville Fairgrounds, Nashville, TN",
+    "date_START": "2024-09-01T12:00:00Z",
+    "date_END": "2024-09-03T23:00:00Z"
+  },
+  {
+    "name": "Vinyl Swap Meet",
+    "event_description": "Trade rare records with fellow collectors.",
+    "address": "Community Center, Austin, TX",
+    "date_START": "2024-02-15T09:00:00Z",
+    "date_END": "2024-02-15T16:00:00Z"
+  },
+  {
+    "name": "Pop Diva Night",
+    "event_description": "A tribute night to the queens of pop.",
+    "address": "Club Q, Miami, FL",
+    "date_START": "2024-05-05T21:00:00Z",
+    "date_END": "2024-05-06T03:00:00Z"
+  },
+  {
+    "name": "Heavy Metal Thunder",
+    "event_description": "Four bands, one mosh pit.",
+    "address": "The Basement, Chicago, IL",
+    "date_START": "2024-10-30T19:00:00Z",
+    "date_END": "2024-10-31T00:00:00Z"
+  },
+  {
+    "name": "Songwriter's Circle",
+    "event_description": "Intimate acoustic performances and storytelling.",
+    "address": "Bluebird Cafe, Nashville, TN",
+    "date_START": "2024-04-05T18:00:00Z",
+    "date_END": "2024-04-05T21:00:00Z"
+  },
+  {
+    "name": "K-Pop World Tour: Seoul Fire",
+    "event_description": "The global sensation live in concert.",
+    "address": "Wembley Stadium, London, UK",
+    "date_START": "2024-07-20T18:30:00Z",
+    "date_END": "2024-07-20T22:30:00Z"
+  },
+  {
+    "name": "Reggae Sunsplash",
+    "event_description": "Beach vibes and basslines.",
+    "address": "Montego Bay, Jamaica",
+    "date_START": "2024-01-15T14:00:00Z",
+    "date_END": "2024-01-16T04:00:00Z"
+  },
+  {
+    "name": "Lo-Fi Study Session Live",
+    "event_description": "Live beat making and chill vibes for students.",
+    "address": "University Library Lawn, Boston, MA",
+    "date_START": "2024-05-10T16:00:00Z",
+    "date_END": "2024-05-10T20:00:00Z"
+  },
+  {
+    "name": "Piano Masterclass",
+    "event_description": "Learn from the maestro himself.",
+    "address": "Music Conservatory, Vienna, AT",
+    "date_START": "2024-09-15T10:00:00Z",
+    "date_END": "2024-09-15T14:00:00Z"
+  },
+  {
+    "name": "Retro 80s Prom",
+    "event_description": "Synthpop, big hair, and neon.",
+    "address": "High School Gym, Portland, OR",
+    "date_START": "2024-11-12T20:00:00Z",
+    "date_END": "2024-11-13T01:00:00Z"
+  },
+  {
+    "name": "Battle of the Bands",
+    "event_description": "Local high school bands compete for the grand prize.",
+    "address": "Town Hall, Springfield, IL",
+    "date_START": "2024-06-01T17:00:00Z",
+    "date_END": "2024-06-01T22:00:00Z"
+  },
+  {
+    "name": "Opera Gala",
+    "event_description": "Black tie event featuring 'Carmen'.",
+    "address": "Sydney Opera House, Sydney, AU",
+    "date_START": "2024-08-10T19:00:00Z",
+    "date_END": "2024-08-10T23:00:00Z"
+  },
+  {
+    "name": "Hip Hop History Exhibit Opening",
+    "event_description": "DJ sets and archival footage screening.",
+    "address": "Museum of Pop Culture, Seattle, WA",
+    "date_START": "2024-02-01T18:00:00Z",
+    "date_END": "2024-02-01T21:00:00Z"
+  },
+  {
+    "name": "Ambient Sound Bath",
+    "event_description": "Bring a yoga mat and drift away.",
+    "address": "Healing Arts Center, Sedona, AZ",
+    "date_START": "2024-03-21T19:00:00Z",
+    "date_END": "2024-03-21T20:30:00Z"
+  }
+]
