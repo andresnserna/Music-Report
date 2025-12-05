@@ -257,19 +257,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="290.66666666666669" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Title (Hot)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BD-yH-eI8">
-                                                    <rect key="frame" x="20" y="12" width="222" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Title (Hot)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BD-yH-eI8">
+                                                    <rect key="frame" x="20" y="12" width="229" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="party.popper" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mzc-ph-2p6">
-                                                    <rect key="frame" x="250" y="5.6666666666666572" width="32" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="party.popper" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mzc-ph-2p6">
+                                                    <rect key="frame" x="257" y="5.6666666666666643" width="25.333333333333314" height="32"/>
                                                     <color key="tintColor" name="AccentColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25.333333333333314" id="PLW-E4-egG"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="mzc-ph-2p6" secondAttribute="bottom" constant="7.6699999999999999" id="12O-tR-NA8"/>
+                                                <constraint firstItem="7BD-yH-eI8" firstAttribute="bottom" secondItem="rt4-ov-ini" secondAttribute="bottomMargin" id="8Sm-WC-ysR"/>
+                                                <constraint firstItem="mzc-ph-2p6" firstAttribute="leading" secondItem="7BD-yH-eI8" secondAttribute="trailing" constant="8" symbolic="YES" id="LVx-G5-lgt"/>
+                                                <constraint firstAttribute="trailing" secondItem="mzc-ph-2p6" secondAttribute="trailing" constant="8.3300000000000001" id="QMg-r5-x5A"/>
+                                                <constraint firstItem="7BD-yH-eI8" firstAttribute="top" secondItem="rt4-ov-ini" secondAttribute="topMargin" constant="1" id="QxC-JO-ZyD"/>
+                                                <constraint firstItem="7BD-yH-eI8" firstAttribute="leading" secondItem="rt4-ov-ini" secondAttribute="leadingMargin" id="cGu-Xe-xYz"/>
+                                                <constraint firstItem="mzc-ph-2p6" firstAttribute="top" secondItem="rt4-ov-ini" secondAttribute="top" constant="7" id="pfX-f0-mvi"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="pSa-oy-hWQ" kind="show" id="q3t-bg-PIM"/>
@@ -282,14 +292,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="290.66666666666669" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tz7-74-tAG">
-                                                    <rect key="frame" x="20" y="12" width="281" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tz7-74-tAG">
+                                                    <rect key="frame" x="20" y="12" width="270.66666666666669" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="tz7-74-tAG" secondAttribute="bottom" constant="11" id="0dA-sB-8gm"/>
+                                                <constraint firstAttribute="trailing" secondItem="tz7-74-tAG" secondAttribute="trailing" id="7ig-4L-pgA"/>
+                                                <constraint firstItem="tz7-74-tAG" firstAttribute="top" secondItem="skK-s7-PKk" secondAttribute="top" constant="12" id="MFY-6R-8F1"/>
+                                                <constraint firstItem="tz7-74-tAG" firstAttribute="leading" secondItem="skK-s7-PKk" secondAttribute="leading" constant="20" symbolic="YES" id="pIP-ER-0yU"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
