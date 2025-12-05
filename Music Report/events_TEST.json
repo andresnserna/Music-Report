@@ -5,7 +5,9 @@
     "address": "123 desert Highway, Indio, CA",
     "date_START": "2024-04-12T14:00:00Z",
     "date_END": "2024-04-15T02:00:00Z",
-    "hot_event": true
+    "hot_event": true,
+    "event_LAT": 33.7206,
+    "event_LON": -116.2156
   },
   {
     "name": "Jazz in the Park",
@@ -14,7 +16,9 @@
     "date_START": "2024-05-20T11:00:00Z",
     "date_END": "2024-05-20T18:00:00Z"
     ,
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": 40.7851,
+    "event_LON": -73.9683
   },
   {
     "name": "The Weeknd: After Hours Tour",
@@ -23,7 +27,9 @@
     "date_START": "2024-06-15T19:00:00Z",
     "date_END": "2024-06-15T23:30:00Z"
     ,
-    "hot_event": true
+    "hot_event": true,
+    "event_LAT": 33.9535,
+    "event_LON": -118.3390
   },
   {
     "name": "Indie Rock Showcase",
@@ -32,7 +38,9 @@
     "date_START": "2024-03-10T20:00:00Z",
     "date_END": "2024-03-11T01:00:00Z"
     ,
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": 47.6146,
+    "event_LON": -122.3452
   },
   {
     "name": "Symphony Under the Stars",
@@ -41,7 +49,9 @@
     "date_START": "2024-07-04T19:30:00Z",
     "date_END": "2024-07-04T22:00:00Z"
     ,
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": 34.1122,
+    "event_LON": -118.3391
   },
   {
     "name": "Techno Bunker Rave",
@@ -51,6 +61,8 @@
     "date_END": "2024-08-20T08:00:00Z"
     ,
     "hot_event": true
+    ,"event_LAT": 52.5200,
+    "event_LON": 13.4050
   },
   {
     "name": "Country Roads Music Fest",
@@ -59,7 +71,9 @@
     "date_START": "2024-09-01T12:00:00Z",
     "date_END": "2024-09-03T23:00:00Z"
     ,
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": 36.1332,
+    "event_LON": -86.7663
   },
   {
     "name": "Vinyl Swap Meet",
@@ -68,7 +82,9 @@
     "date_START": "2024-02-15T09:00:00Z",
     "date_END": "2024-02-15T16:00:00Z"
     ,
-    "hot_event": true
+    "hot_event": true,
+    "event_LAT": 30.2672,
+    "event_LON": -97.7431
   },
   {
     "name": "Pop Diva Night",
@@ -77,7 +93,9 @@
     "date_START": "2024-05-05T21:00:00Z",
     "date_END": "2024-05-06T03:00:00Z"
     ,
-    "hot_event": true
+    "hot_event": true,
+    "event_LAT": 25.7617,
+    "event_LON": -80.1918
   },
   {
     "name": "Heavy Metal Thunder",
@@ -86,7 +104,9 @@
     "date_START": "2024-10-30T19:00:00Z",
     "date_END": "2024-10-31T00:00:00Z"
     ,
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": 41.8781,
+    "event_LON": -87.6298
   },
   {
     "name": "Songwriter's Circle",
@@ -95,7 +115,9 @@
     "date_START": "2024-04-05T18:00:00Z",
     "date_END": "2024-04-05T21:00:00Z"
     ,
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": 36.1098,
+    "event_LON": -86.8123
   },
   {
     "name": "K-Pop World Tour: Seoul Fire",
@@ -104,7 +126,9 @@
     "date_START": "2024-07-20T18:30:00Z",
     "date_END": "2024-07-20T22:30:00Z"
     ,
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": 51.5560,
+    "event_LON": -0.2796
   },
   {
     "name": "Reggae Sunsplash",
@@ -113,7 +137,9 @@
     "date_START": "2024-01-15T14:00:00Z",
     "date_END": "2024-01-16T04:00:00Z"
     ,
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": 18.4714,
+    "event_LON": -77.9229
   },
   {
     "name": "Lo-Fi Study Session Live",
@@ -121,7 +147,9 @@
     "address": "University Library Lawn, Boston, MA",
     "date_START": "2024-05-10T16:00:00Z",
     "date_END": "2024-05-10T20:00:00Z",
-    "hot_event": true
+    "hot_event": true,
+    "event_LAT": 42.3601,
+    "event_LON": -71.0589
   },
   {
     "name": "Piano Masterclass",
@@ -129,7 +157,9 @@
     "address": "Music Conservatory, Vienna, AT",
     "date_START": "2024-09-15T10:00:00Z",
     "date_END": "2024-09-15T14:00:00Z",
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": 48.2082,
+    "event_LON": 16.3738
   },
   {
     "name": "Retro 80s Prom",
@@ -137,7 +167,9 @@
     "address": "High School Gym, Portland, OR",
     "date_START": "2024-11-12T20:00:00Z",
     "date_END": "2024-11-13T01:00:00Z",
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": 45.5152,
+    "event_LON": -122.6784
   },
   {
     "name": "Battle of the Bands",
@@ -146,7 +178,9 @@
     "date_START": "2024-06-01T17:00:00Z",
     "date_END": "2024-06-01T22:00:00Z"
     ,
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": 39.7817,
+    "event_LON": -89.6501
   },
   {
     "name": "Opera Gala",
@@ -154,7 +188,9 @@
     "address": "Sydney Opera House, Sydney, AU",
     "date_START": "2024-08-10T19:00:00Z",
     "date_END": "2024-08-10T23:00:00Z",
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": -33.8568,
+    "event_LON": 151.2153
   },
   {
     "name": "Hip Hop History Exhibit Opening",
@@ -163,7 +199,9 @@
     "date_START": "2024-02-01T18:00:00Z",
     "date_END": "2024-02-01T21:00:00Z"
     ,
-    "hot_event": true
+    "hot_event": true,
+    "event_LAT": 47.6215,
+    "event_LON": -122.3481
   },
   {
     "name": "Ambient Sound Bath",
@@ -171,6 +209,8 @@
     "address": "Healing Arts Center, Sedona, AZ",
     "date_START": "2024-03-21T19:00:00Z",
     "date_END": "2024-03-21T20:30:00Z",
-    "hot_event": false
+    "hot_event": false,
+    "event_LAT": 34.8697,
+    "event_LON": -111.7609
   }
 ]
