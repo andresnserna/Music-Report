@@ -9,6 +9,8 @@ import UIKit
 import MapKit
 
 class EventInfoViewController: UIViewController {
+    
+    var selectedEvent: Event?
 
     override func viewDidLoad() {
         super.viewDidLoad()

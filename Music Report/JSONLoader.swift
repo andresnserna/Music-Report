@@ -34,8 +34,8 @@ struct Events_fromJSON: Codable {
     let date_START: String  // ISO8601 date string
     let date_END: String    // ISO8601 date string
     let hot_event: Bool
-    let event_LAT: Float?
-    let event_LON: Float?
+    let event_LAT: Double
+    let event_LON: Double
 
 }
 
