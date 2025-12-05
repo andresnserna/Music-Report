@@ -38,7 +38,15 @@ class NearbyViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showEventInfo" {
+        if segue.identifier == "showRegularEventInfo" {
+            if let indexPath = sender as? IndexPath,
+               let destinationVC = segue.destination as? EventInfoViewController {
+                print("Sending this event: \(events[indexPath.row])")
+                destinationVC.selectedEvent = events[indexPath.row]
+            }
+        }
+        
+        if segue.identifier == "showHotEventInfo" {
             if let indexPath = sender as? IndexPath,
                let destinationVC = segue.destination as? EventInfoViewController {
                 print("Sending this event: \(events[indexPath.row])")
