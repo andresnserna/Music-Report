@@ -29,7 +29,7 @@
     "post_type": "song",
     "text": "Etta James singing 'At Last' gives me chills every single time. Pure emotion.",
     "date": "2024-03-12T20:20:00Z",
-    "music_ID": "M-013"
+    "music_ID": "M-050"
   },
   {
     "post_ID": "E5F6A7B8-C9D0-4123-E567-890123EFGHIJ",
@@ -72,5 +72,21 @@
     "post_type": "text",
     "text": "It's a rainy day, perfect for some tea and sad indie folk music.",
     "date": "2024-10-15T15:30:00Z"
+  },
+  {
+    "post_ID": "NEW1-1111-2222-3333-444444444444",
+    "username": "MusicExplorer",
+    "post_type": "song",
+    "text": "Just discovered this Kendrick track. Absolutely fire! 🔥",
+    "date": "2024-04-20T18:30:00Z",
+    "music_ID": "M-003"
+  },
+  {
+    "post_ID": "NEW2-2222-3333-4444-555555555555",
+    "username": "IndieScout",
+    "post_type": "album",
+    "text": "OK Computer is a timeless masterpiece. If you haven't heard it yet, what are you waiting for?",
+    "date": "2024-05-15T21:00:00Z",
+    "music_ID": "M-012"
   }
 ]

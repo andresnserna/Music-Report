@@ -80,12 +80,16 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Set up table view
         tbl_postItems.dataSource = self
         tbl_postItems.delegate = self
+        tbl_postItems.estimatedRowHeight = 138 //height of post cell in the interface builder
         
         // Load posts from JSON into Core Data (do this once)
         loadPostsFromJSON()
         
-        // Load posts from Core Data to display
-        refreshPosts()
+        // Set segmented control to home by default
+        seg_feedPicker.selectedSegmentIndex = 0
+        
+        // Trigger the filter for home feed
+        seg_feedPicker.sendActions(for: .valueChanged)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,6 +100,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         refreshPosts()
+        
+        // go back to last section picked in the picker
+        seg_feedPicker.sendActions(for: .valueChanged)
 
     }
     
@@ -153,24 +160,59 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func seg_feedPicker(_ sender: UISegmentedControl) {
-        // Filter posts based on segment selection
+        let fetchRequest: NSFetchRequest<Post> = Post.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+        
+        // Load all music data to check in_library status
+        let allMusic = loadMusic()
+        
         if sender.selectedSegmentIndex == 0 {
             // Home feed - show posts of music only in library
-            
-            //will impl later
-            refreshPosts()
-
+            do {
+                let allPosts = try context.fetch(fetchRequest)
+                posts = allPosts.filter { post in
+                    
+                    guard let musicID = post.music_ID else {
+                        // INCLUDE text posts (no music_ID)
+                        return true
+                    }
+                    
+                    // Check if music is in library
+                    return allMusic.first(where: { $0.music_ID == musicID })?.in_library == true
+                }
+                
+                tbl_postItems.reloadData()
+                
+            } catch {
+                print("Error fetching posts: \(error)")
+            }
         } else {
             // New feed - show posts only of music not in library
-            
-            //will impl later
-            refreshPosts()
-
+            do {
+                let allPosts = try context.fetch(fetchRequest)
+                print("DEBUG: Total posts fetched: \(allPosts.count)")
+                
+                posts = allPosts.filter { post in
+                    guard let musicID = post.music_ID else {
+                        return false
+                    }
+                    let musicItem = allMusic.first(where: { $0.music_ID == musicID })
+                    print("DEBUG NEW: Post \(post.post_ID?.uuidString ?? "unknown") | Music ID: \(musicID) | In Library: \(musicItem?.in_library ?? false)")
+                    return musicItem?.in_library == false
+                }
+                
+                print("DEBUG: New feed posts count: \(posts.count)")
+                tbl_postItems.reloadData()
+                
+            } catch {
+                print("Error fetching posts: \(error)")
+            }
         }
     }
     @IBAction func btn_newPost(_ sender: UIButton) {
     }
     
+    @IBOutlet weak var seg_feedPicker: UISegmentedControl!
     @IBOutlet weak var lbl_activeUsername: UILabel!
     
     @IBOutlet weak var tbl_postItems: UITableView!
