@@ -19,7 +19,6 @@ class EventInfoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // Call it here instead, after selectedEvent has been set
         populateEventInfoVCLabels()
     }
     
@@ -30,7 +29,10 @@ class EventInfoViewController: UIViewController {
     @IBOutlet weak var lbl_eventDescription: UILabel!
     
     @IBAction func btn_getTickets(_ sender: Any) {
-        guard let event = selectedEvent else { return }
+        guard let event = selectedEvent else {
+            print("Error grabbing event")
+            return
+        }
         
         // ticketmaster search for the event name
         let searchQuery = event.name
@@ -43,7 +45,11 @@ class EventInfoViewController: UIViewController {
     }
     
     func populateEventInfoVCLabels() {
-        guard let event = selectedEvent else { return }
+        guard let event = selectedEvent else {
+            print("Error grabbing event")
+            return
+        }
+        print("here is the event: \(event)")
         lbl_eventTitle.text = event.name
         lbl_eventAddress.text = event.address
         lbl_eventDate.text = event.date_START
