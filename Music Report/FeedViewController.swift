@@ -190,18 +190,18 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             // New feed - show posts only of music not in library
             do {
                 let allPosts = try context.fetch(fetchRequest)
-                print("DEBUG: Total posts fetched: \(allPosts.count)")
+                //print("DEBUG: Total posts fetched: \(allPosts.count)")
                 
                 posts = allPosts.filter { post in
                     guard let musicID = post.music_ID else {
                         return false
                     }
                     let musicItem = allMusic.first(where: { $0.music_ID == musicID })
-                    print("DEBUG NEW: Post \(post.post_ID?.uuidString ?? "unknown") | Music ID: \(musicID) | In Library: \(musicItem?.in_library ?? false)")
+                    //print("DEBUG NEW: Post \(post.post_ID?.uuidString ?? "unknown") | Music ID: \(musicID) | In Library: \(musicItem?.in_library ?? false)")
                     return musicItem?.in_library == false
                 }
                 
-                print("DEBUG: New feed posts count: \(posts.count)")
+                //print("DEBUG: New feed posts count: \(posts.count)")
                 tbl_postItems.reloadData()
                 
             } catch {

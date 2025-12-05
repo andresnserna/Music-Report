@@ -16,7 +16,7 @@ class SongPostCell: UITableViewCell {
     @IBOutlet weak var lbl_songName: UILabel!
     @IBOutlet weak var lbl_albumName: UILabel!
     
-    func configure(with post: Post, music: Music_fromJSON?) {
+    func configure(with post: Post, Music: Music_fromJSON?) {
         lbl_username.text = "@\(post.username ?? "Unknown")"
         lbl_postText.text = post.text
         
@@ -26,7 +26,7 @@ class SongPostCell: UITableViewCell {
             lbl_date.text = formatter.string(from: date)
         }
         
-        if let music = music {
+        if let music = Music {
             lbl_songName.text = "\(music.track_name) - \(music.artist)"
             lbl_albumName.text = music.album_name
             img_albumArt.image = UIImage(named: music.album_art_file)

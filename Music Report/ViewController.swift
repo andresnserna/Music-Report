@@ -39,14 +39,14 @@ class ViewController: UIViewController {
                     let destinationViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
                     self.present(destinationViewController, animated: true, completion: nil)
                     activeUser = existingUser.username
-                    print("DEBUG: Found Username: \(existingUser.username ?? "NONE")")
+                    //print("DEBUG: Found Username: \(existingUser.username ?? "NONE")")
                     userFound = true
                     break  // Exit loop once we find a match
                 }
             }
             
             if !userFound {
-                print("DEBUG: No matching username/password found")
+                //print("DEBUG: No matching username/password found")
                 alertTitle = "Incorrect"
                 alertMessage = "Username or password incorrect"
                 alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)

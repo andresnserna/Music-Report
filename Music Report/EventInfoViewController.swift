@@ -19,6 +19,7 @@ class EventInfoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //print("DEBUG: EventInfoVC viewWillAppear - selectedEvent is: \(selectedEvent?.name ?? "nil")")
         populateEventInfoVCLabels()
     }
     
@@ -62,7 +63,7 @@ class EventInfoViewController: UIViewController {
         annotation.title = event.name
         map_eventMapView.addAnnotation(annotation)
         
-        // Center map on event 
+        // Center map on event
         let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
         map_eventMapView.setRegion(region, animated: false)
     }
