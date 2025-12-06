@@ -19,6 +19,9 @@ class NewPostViewController: UIViewController {
         
     @IBOutlet weak var txtV_postBody: UITextView!
     
+    @IBAction func btn_attachMusic(_ sender: UIButton) {
+        performSegue(withIdentifier: "showMusicPicker", sender: nil)
+    }
     @IBOutlet weak var btn_attachedMusicImage: UIButton!
     @IBOutlet weak var lbl_attachedMusicTitle: UILabel!
     @IBOutlet weak var lbl_attachedMusicSubtitle: UILabel!
@@ -63,6 +66,33 @@ class NewPostViewController: UIViewController {
             let alertview = UIAlertController(title: "Error", message: "Failed to save post", preferredStyle: .alert)
             alertview.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alertview, animated: true)
+        }
+    }
+    
+    func updateMusicDisplay() {
+        guard let music = selectedMusic else { return }
+        
+        // Update the labels
+        if let trackName = music.track_name, !trackName.isEmpty {
+            // for songs
+            lbl_attachedMusicTitle.text = trackName
+            lbl_attachedMusicSubtitle.text = music.album_name
+        } else {
+            // for lbums
+            lbl_attachedMusicTitle.text = music.album_name
+            lbl_attachedMusicSubtitle.text = music.artist
+        }
+        
+        // Update button to show album art instead of icon
+        if let albumArtImage = UIImage(named: music.album_art_file) {
+            btn_attachedMusicImage.setImage(albumArtImage, for: .normal)
+            btn_attachedMusicImage.setTitle("", for: .normal)
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMusicPicker" {
+            // No need to pass anything, the picker will handle communication back
         }
     }
     

@@ -20,7 +20,7 @@ struct Music_fromJSON: Codable {
     let music_ID: String
     let artist: String
     let album_name: String
-    let track_name: String
+    let track_name: String?
     let track_genre: String
     let album_art_file: String
     let in_library: Bool

@@ -485,5 +485,92 @@
     "track_genre": "Cinematic",
     "album_art_file": "M-050.jpg",
     "in_library": false
+  },
+  {
+    "music_ID": "M-051",
+    "artist": "Tyler, The Creator",
+    "album_name": "IGOR",
+    "track_genre": "Hip Hop",
+    "album_art_file": "M-051.jpg",
+    "in_library": true,
+    "play_count": 450
+  },
+  {
+    "music_ID": "M-052",
+    "artist": "The Strokes",
+    "album_name": "Is This It",
+    "track_genre": "Indie Rock",
+    "album_art_file": "M-052.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-053",
+    "artist": "Creative: Solar Flares",
+    "album_name": "Magnetic Storm",
+    "track_genre": "Ambient",
+    "album_art_file": "M-053.jpg",
+    "in_library": true,
+    "play_count": 82
+  },
+  {
+    "music_ID": "M-054",
+    "artist": "Marvin Gaye",
+    "album_name": "What's Going On",
+    "track_genre": "Soul",
+    "album_art_file": "M-054.jpg",
+    "in_library": true,
+    "play_count": 112
+  },
+  {
+    "music_ID": "M-055",
+    "artist": "Björk",
+    "album_name": "Homogenic",
+    "track_genre": "Art Pop",
+    "album_art_file": "M-055.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-056",
+    "artist": "Creative: The Deep Sea Divers",
+    "album_name": "Abyssal Plains",
+    "track_genre": "Post-Rock",
+    "album_art_file": "M-056.jpg",
+    "in_library": true,
+    "play_count": 24
+  },
+  {
+    "music_ID": "M-057",
+    "artist": "Nas",
+    "album_name": "Illmatic",
+    "track_genre": "Hip Hop",
+    "album_art_file": "M-057.jpg",
+    "in_library": true,
+    "play_count": 365
+  },
+  {
+    "music_ID": "M-058",
+    "artist": "Creative: Retro Future",
+    "album_name": "VHS Memories",
+    "track_genre": "Synthwave",
+    "album_art_file": "M-058.jpg",
+    "in_library": false
+  },
+  {
+    "music_ID": "M-059",
+    "artist": "Joy Division",
+    "album_name": "Unknown Pleasures",
+    "track_genre": "Post-Punk",
+    "album_art_file": "M-059.jpg",
+    "in_library": true,
+    "play_count": 198
+  },
+  {
+    "music_ID": "M-060",
+    "artist": "Creative: Forest Spirits",
+    "album_name": "Moss & Stone",
+    "track_genre": "Folk",
+    "album_art_file": "M-060.jpg",
+    "in_library": true,
+    "play_count": 56
   }
 ]

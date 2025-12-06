@@ -41,7 +41,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 musicData = allMusic.first { $0.music_ID == musicID }
             }
             
-            cell.configure(with: post, music: musicData)
+                cell.configure(with: post, Music: musicData)
             return cell
             
         case "album":

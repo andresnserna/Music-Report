@@ -7,75 +7,104 @@
 
 import UIKit
 
-class MusicPickerViewController: UITableViewController {
+class MusicPickerViewController: UITableViewController, UISearchBarDelegate {
+
+    var allMusic = [Music_fromJSON]()
+    var filteredMusic = [Music_fromJSON]()
+    var isSearching = false
+    
+    weak var delegate: NewPostViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        // Load all music from JSON
+        allMusic = loadMusic()
+        filteredMusic = allMusic
+        
+        // Set up search bar
+        if let searchBar = tableView.tableHeaderView as? UISearchBar {
+            searchBar.delegate = self
+        }
     }
 
-    // MARK: - Table view data source
+// Table view ovverides
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return isSearching ? filteredMusic.count : allMusic.count
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let music = isSearching ? filteredMusic[indexPath.row] : allMusic[indexPath.row]
+        
+        // Check if it's a song or album based on whether track_name exists
+        if let trackName = music.track_name, !trackName.isEmpty {
+            // It's a song
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath)
+            
+            if let imageView = cell.imageView {
+                imageView.image = UIImage(named: music.album_art_file)
+            }
+            cell.textLabel?.text = music.track_name
+            cell.detailTextLabel?.text = music.artist
+            
+            return cell
+        } else {
+            // It's an album
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath)
+            
+            if let imageView = cell.viewWithTag(100) as? UIImageView {
+                imageView.image = UIImage(named: music.album_art_file)
+            }
+            if let titleLabel = cell.viewWithTag(101) as? UILabel {
+                titleLabel.text = music.album_name
+            }
+            
+            return cell
+        }
+   }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedMusic = isSearching ? filteredMusic[indexPath.row] : allMusic[indexPath.row]
+        
+        // Pass the selected music back to NewPostViewController
+        if let newPostVC = presentingViewController as? UINavigationController,
+           let targetVC = newPostVC.viewControllers.last as? NewPostViewController {
+            targetVC.selectedMusic = selectedMusic
+            targetVC.updateMusicDisplay()
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+//searchbar functions
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            isSearching = false
+            filteredMusic = allMusic
+        } else {
+            isSearching = true
+            filteredMusic = allMusic.filter { music in
+                //trackname is optional so there will be cases the 
+                music.track_name?.lowercased().contains(searchText.lowercased()) ?? false ||
+                music.album_name.lowercased().contains(searchText.lowercased()) ||
+                music.artist.lowercased().contains(searchText.lowercased())
+            }
+        }
+        tableView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        isSearching = false
+        filteredMusic = allMusic
+        searchBar.resignFirstResponder()
+        tableView.reloadData()
+    }
 
 }

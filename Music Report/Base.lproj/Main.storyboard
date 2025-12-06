@@ -905,6 +905,12 @@
                                 <buttonConfiguration key="configuration" style="plain" image="music.quarternote.3" catalog="system">
                                     <color key="baseForegroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btn_attachMusic:" destination="1PF-US-gWy" eventType="touchUpInside" id="Zam-D1-4x4"/>
+                                    <segue destination="pkI-wb-MgF" kind="popoverPresentation" identifier="showMusicPicker" popoverAnchorView="7F8-k6-bMn" id="clm-Wa-coy">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-yj-nY0">
                                 <rect key="frame" x="170" y="576" width="63" height="35"/>
@@ -927,9 +933,6 @@
                         <outlet property="lbl_attachedMusicSubtitle" destination="vKf-kp-enl" id="wSF-eq-P9N"/>
                         <outlet property="lbl_attachedMusicTitle" destination="NTz-4T-SVk" id="z5y-Ue-eWA"/>
                         <outlet property="txtV_postBody" destination="QgG-fy-0h9" id="kGP-6M-Chs"/>
-                        <segue destination="pkI-wb-MgF" kind="popoverPresentation" identifier="showMusicPicker" id="9hC-qC-68p">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dF0-6A-5yH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -953,7 +956,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicCell" rowHeight="65" id="CPf-z5-NXb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="65" id="CPf-z5-NXb" customClass="SongCell" customModule="Music_Report" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="94" width="402" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CPf-z5-NXb" id="TJY-Vx-nQV">
@@ -961,10 +964,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AiQ-cg-BhS">
-                                            <rect key="frame" x="20" y="8" width="48" height="48"/>
+                                            <rect key="frame" x="20" y="9" width="48" height="48"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="48" id="U6X-f5-frc"/>
-                                                <constraint firstAttribute="width" constant="48" id="yP0-Qx-dgj"/>
+                                                <constraint firstAttribute="width" constant="48" id="CcJ-Ue-T0t"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gL-6y-PIy">
@@ -981,30 +983,39 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="xUY-qM-N42" firstAttribute="top" secondItem="2gL-6y-PIy" secondAttribute="bottom" constant="8" symbolic="YES" id="7Nd-IC-b9E"/>
-                                        <constraint firstAttribute="trailing" secondItem="2gL-6y-PIy" secondAttribute="trailing" constant="20" symbolic="YES" id="9dn-yJ-mgO"/>
-                                        <constraint firstItem="2gL-6y-PIy" firstAttribute="leading" secondItem="AiQ-cg-BhS" secondAttribute="trailing" constant="8" symbolic="YES" id="BJd-f4-EHz"/>
-                                        <constraint firstItem="2gL-6y-PIy" firstAttribute="leading" secondItem="AiQ-cg-BhS" secondAttribute="trailing" constant="8" symbolic="YES" id="KGH-ka-bBw"/>
-                                        <constraint firstItem="AiQ-cg-BhS" firstAttribute="leading" secondItem="TJY-Vx-nQV" secondAttribute="leading" constant="20" symbolic="YES" id="ivU-oB-3Ve"/>
-                                        <constraint firstAttribute="trailing" secondItem="xUY-qM-N42" secondAttribute="trailing" constant="20" symbolic="YES" id="rMJ-qy-EuG"/>
-                                        <constraint firstItem="AiQ-cg-BhS" firstAttribute="top" secondItem="TJY-Vx-nQV" secondAttribute="top" constant="8" id="v09-qX-XVV"/>
-                                        <constraint firstItem="2gL-6y-PIy" firstAttribute="top" secondItem="TJY-Vx-nQV" secondAttribute="top" constant="9" id="wYa-Ks-52b"/>
-                                        <constraint firstItem="xUY-qM-N42" firstAttribute="leading" secondItem="AiQ-cg-BhS" secondAttribute="trailing" constant="8" symbolic="YES" id="xDl-Oc-TnK"/>
+                                        <constraint firstItem="xUY-qM-N42" firstAttribute="leading" secondItem="AiQ-cg-BhS" secondAttribute="trailing" constant="8" symbolic="YES" id="3nR-9Q-Brr"/>
+                                        <constraint firstItem="xUY-qM-N42" firstAttribute="top" secondItem="2gL-6y-PIy" secondAttribute="bottom" constant="8" symbolic="YES" id="84u-Ib-iMB"/>
+                                        <constraint firstItem="AiQ-cg-BhS" firstAttribute="top" secondItem="TJY-Vx-nQV" secondAttribute="top" constant="9" id="BWL-i6-XYu"/>
+                                        <constraint firstItem="xUY-qM-N42" firstAttribute="top" secondItem="2gL-6y-PIy" secondAttribute="bottom" constant="8" symbolic="YES" id="HRt-cM-7H0"/>
+                                        <constraint firstItem="AiQ-cg-BhS" firstAttribute="leading" secondItem="TJY-Vx-nQV" secondAttribute="leading" constant="20" symbolic="YES" id="J0n-g4-5la"/>
+                                        <constraint firstAttribute="trailing" secondItem="2gL-6y-PIy" secondAttribute="trailing" constant="20" symbolic="YES" id="cnf-rR-Z0w"/>
+                                        <constraint firstAttribute="trailing" secondItem="xUY-qM-N42" secondAttribute="trailing" constant="20" symbolic="YES" id="fPD-e6-1y1"/>
+                                        <constraint firstItem="2gL-6y-PIy" firstAttribute="leading" secondItem="AiQ-cg-BhS" secondAttribute="trailing" constant="8" symbolic="YES" id="gaN-AS-LTC"/>
+                                        <constraint firstAttribute="bottom" secondItem="AiQ-cg-BhS" secondAttribute="bottom" constant="8" id="ieO-hj-iQr"/>
+                                        <constraint firstItem="2gL-6y-PIy" firstAttribute="top" secondItem="TJY-Vx-nQV" secondAttribute="top" constant="9" id="m2K-3c-SdJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="xUY-qM-N42" secondAttribute="bottom" constant="9" id="tR0-7m-sF9"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="img_albumImage" destination="AiQ-cg-BhS" id="zm7-hi-qxs"/>
+                                    <outlet property="lbl_artistName" destination="xUY-qM-N42" id="GTf-7q-2ZH"/>
+                                    <outlet property="lbl_songName" destination="2gL-6y-PIy" id="CrK-Ic-P3u"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumCell" rowHeight="65" id="eCB-ZR-Hlc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumCell" rowHeight="65" id="eCB-ZR-Hlc" customClass="AlbumCell" customModule="Music_Report" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="159" width="402" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eCB-ZR-Hlc" id="PIB-PF-Zv2">
                                     <rect key="frame" x="0.0" y="0.0" width="402" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKh-Jk-pip">
-                                            <rect key="frame" x="20" y="8" width="48" height="48"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BKh-Jk-pip">
+                                            <rect key="frame" x="20" y="9" width="48" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="48" id="cVh-Zh-VEz"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V2D-6E-uGm">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V2D-6E-uGm">
                                             <rect key="frame" x="76" y="22" width="306" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1012,7 +1023,17 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="BKh-Jk-pip" firstAttribute="top" secondItem="PIB-PF-Zv2" secondAttribute="top" constant="9" id="DMt-fo-XBh"/>
+                                        <constraint firstItem="BKh-Jk-pip" firstAttribute="leading" secondItem="PIB-PF-Zv2" secondAttribute="leading" constant="20" symbolic="YES" id="P9p-Pt-apI"/>
+                                        <constraint firstItem="V2D-6E-uGm" firstAttribute="leading" secondItem="BKh-Jk-pip" secondAttribute="trailing" constant="8" symbolic="YES" id="hcy-rx-n6F"/>
+                                        <constraint firstAttribute="bottom" secondItem="BKh-Jk-pip" secondAttribute="bottom" constant="8" id="vqO-rH-RPs"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="img_albumImage" destination="BKh-Jk-pip" id="0ez-eh-Vhe"/>
+                                    <outlet property="lbl_albumName" destination="V2D-6E-uGm" id="0o1-GO-A4c"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
