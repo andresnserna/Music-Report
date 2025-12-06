@@ -225,7 +225,7 @@
             </objects>
             <point key="canvasLocation" x="2922.3880597014922" y="-371.39588100686495"/>
         </scene>
-        <!--Nearby-->
+        <!--Nearby View Controller-->
         <scene sceneID="TeO-VC-9gl">
             <objects>
                 <viewController id="n4x-wJ-tjV" customClass="NearbyViewController" customModule="Music_Report" customModuleProvider="target" sceneMemberID="viewController">
@@ -324,7 +324,7 @@
                             <constraint firstAttribute="trailing" secondItem="W1k-d4-di5" secondAttribute="trailing" constant="141" id="ovb-K3-cPl"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Nearby" image="mappin.and.ellipse" catalog="system" selectedImage="mappin.and.ellipse" id="NYL-fl-2ki"/>
+                    <navigationItem key="navigationItem" id="kSY-UI-Phv"/>
                     <connections>
                         <outlet property="lbl_activeUsername" destination="W1k-d4-di5" id="bEU-Am-6rK"/>
                         <outlet property="map_MapView" destination="cbV-jj-7XD" id="H1e-he-vPZ"/>
@@ -334,9 +334,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9L-m9-8wr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5467.1641791044776" y="-8.2379862700228834"/>
+            <point key="canvasLocation" x="6386.5671641791041" y="-8.2379862700228834"/>
         </scene>
-        <!--My Stuff-->
+        <!--My Stuff View Controller-->
         <scene sceneID="FQi-TS-WF8">
             <objects>
                 <viewController id="8uz-R8-LXG" customClass="MyStuffViewController" customModule="Music_Report" customModuleProvider="target" sceneMemberID="viewController">
@@ -524,7 +524,7 @@
                             <constraint firstItem="QdP-QX-j0E" firstAttribute="top" secondItem="Sxt-uH-RH4" secondAttribute="top" constant="100" id="ZFk-q4-9KA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Stuff" image="tray.fill" catalog="system" selectedImage="tray.fill" id="FFr-qR-6uC"/>
+                    <navigationItem key="navigationItem" id="mJ1-iw-OSn"/>
                     <connections>
                         <outlet property="img_topAlbumImage1" destination="PKE-DB-fk1" id="b7I-vU-4c7"/>
                         <outlet property="img_topAlbumImage2" destination="TpC-df-5rc" id="iM7-qX-iRG"/>
@@ -555,9 +555,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5x-ce-fj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5465.6716417910447" y="780.54919908466809"/>
+            <point key="canvasLocation" x="6385.0746268656712" y="780.54919908466809"/>
         </scene>
-        <!--My Feed-->
+        <!--Feed View Controller-->
         <scene sceneID="v7A-67-WMf">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="eaL-Sz-DFP" customClass="FeedViewController" customModule="Music_Report" customModuleProvider="target" sceneMemberID="viewController">
@@ -598,7 +598,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post text" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RT-j3-LV1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RT-j3-LV1">
                                                     <rect key="frame" x="20" y="39" width="362" height="79"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -643,7 +643,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Post text" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3q2-lJ-VKq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Post text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3q2-lJ-VKq">
                                                     <rect key="frame" x="20" y="118" width="362" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="U9M-WE-F6Z"/>
@@ -712,11 +712,11 @@
                                             <outlet property="lbl_username" destination="WW2-md-ubB" id="igO-nQ-hhL"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AlbumPostCell" rowHeight="151" id="mce-u5-QSA" customClass="AlbumPostCell" customModule="Music_Report" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="358" width="402" height="151"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AlbumPostCell" rowHeight="159" id="mce-u5-QSA" customClass="AlbumPostCell" customModule="Music_Report" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="358" width="402" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mce-u5-QSA" id="Klr-0T-P27">
-                                            <rect key="frame" x="0.0" y="0.0" width="402" height="151"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="402" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xq2-S2-3sJ">
@@ -732,8 +732,8 @@
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album post text" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aj4-tC-wdY">
-                                                    <rect key="frame" x="20" y="118" width="362" height="13"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album post text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aj4-tC-wdY">
+                                                    <rect key="frame" x="20" y="118" width="362" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -752,7 +752,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRu-am-LWQ">
-                                                    <rect key="frame" x="88" y="72" width="294" height="21"/>
+                                                    <rect key="frame" x="88" y="72" width="294" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -769,7 +769,7 @@
                                                 <constraint firstItem="cRu-am-LWQ" firstAttribute="trailing" secondItem="Klr-0T-P27" secondAttribute="trailingMargin" id="KKl-O8-wr1"/>
                                                 <constraint firstItem="cRu-am-LWQ" firstAttribute="leading" secondItem="ee9-mu-Ykv" secondAttribute="trailing" constant="8" symbolic="YES" id="Noz-Fn-d2l"/>
                                                 <constraint firstItem="Xq2-S2-3sJ" firstAttribute="bottom" secondItem="ISE-IH-hbq" secondAttribute="bottom" id="OhP-O7-f9n"/>
-                                                <constraint firstItem="Aj4-tC-wdY" firstAttribute="top" secondItem="cRu-am-LWQ" secondAttribute="bottom" constant="25" id="QMG-o3-sDX"/>
+                                                <constraint firstItem="Aj4-tC-wdY" firstAttribute="top" secondItem="cRu-am-LWQ" secondAttribute="bottom" constant="17" id="QMG-o3-sDX"/>
                                                 <constraint firstItem="ee9-mu-Ykv" firstAttribute="leading" secondItem="Klr-0T-P27" secondAttribute="leadingMargin" id="T3p-dJ-mIg"/>
                                                 <constraint firstItem="ISE-IH-hbq" firstAttribute="leading" secondItem="Xq2-S2-3sJ" secondAttribute="trailing" constant="8" symbolic="YES" id="TC2-XB-Htp"/>
                                                 <constraint firstItem="ISE-IH-hbq" firstAttribute="leading" secondItem="Xq2-S2-3sJ" secondAttribute="trailing" constant="8" symbolic="YES" id="WZF-wY-RXU"/>
@@ -830,7 +830,6 @@
                             <constraint firstItem="V6E-UJ-uFG" firstAttribute="trailing" secondItem="TSh-kT-l6P" secondAttribute="trailing" id="lny-3c-WPs"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Feed" image="text.bubble.fill" catalog="system" selectedImage="text.bubble.fill" id="cMC-wO-RO4"/>
                     <navigationItem key="navigationItem" id="ESC-tf-Ran"/>
                     <connections>
                         <outlet property="lbl_activeUsername" destination="GOK-wg-BCJ" id="8VC-n4-fl6"/>
@@ -840,7 +839,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyw-nx-505" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5465.6716417910447" y="-852.63157894736833"/>
+            <point key="canvasLocation" x="6385.0746268656712" y="-852.63157894736833"/>
         </scene>
         <!--New Post View Controller-->
         <scene sceneID="d0B-Pj-OB8">
@@ -937,7 +936,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dF0-6A-5yH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6365.6716417910447" y="-853.31807780320355"/>
+            <point key="canvasLocation" x="7285.0746268656712" y="-853.31807780320355"/>
         </scene>
         <!--Music Picker View Controller-->
         <scene sceneID="F4W-vl-zbJ">
@@ -1015,24 +1014,26 @@
                                                 <constraint firstAttribute="width" constant="48" id="cVh-Zh-VEz"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V2D-6E-uGm">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAv-Dd-zcT">
                                             <rect key="frame" x="76" y="22" width="306" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="CAv-Dd-zcT" firstAttribute="trailing" secondItem="PIB-PF-Zv2" secondAttribute="trailingMargin" id="Aft-jH-DYG"/>
                                         <constraint firstItem="BKh-Jk-pip" firstAttribute="top" secondItem="PIB-PF-Zv2" secondAttribute="top" constant="9" id="DMt-fo-XBh"/>
+                                        <constraint firstItem="CAv-Dd-zcT" firstAttribute="leading" secondItem="BKh-Jk-pip" secondAttribute="trailing" constant="8" symbolic="YES" id="NN2-jT-te0"/>
                                         <constraint firstItem="BKh-Jk-pip" firstAttribute="leading" secondItem="PIB-PF-Zv2" secondAttribute="leading" constant="20" symbolic="YES" id="P9p-Pt-apI"/>
-                                        <constraint firstItem="V2D-6E-uGm" firstAttribute="leading" secondItem="BKh-Jk-pip" secondAttribute="trailing" constant="8" symbolic="YES" id="hcy-rx-n6F"/>
+                                        <constraint firstItem="CAv-Dd-zcT" firstAttribute="top" secondItem="PIB-PF-Zv2" secondAttribute="topMargin" constant="11" id="mIR-ig-hk3"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="CAv-Dd-zcT" secondAttribute="bottom" constant="11" id="oth-bd-w6J"/>
                                         <constraint firstAttribute="bottom" secondItem="BKh-Jk-pip" secondAttribute="bottom" constant="8" id="vqO-rH-RPs"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="img_albumImage" destination="BKh-Jk-pip" id="0ez-eh-Vhe"/>
-                                    <outlet property="lbl_albumName" destination="V2D-6E-uGm" id="0o1-GO-A4c"/>
+                                    <outlet property="lbl_albumName" destination="CAv-Dd-zcT" id="PI9-Od-GND"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1044,7 +1045,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRd-TA-4bL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7183.5820895522384" y="-853.31807780320355"/>
+            <point key="canvasLocation" x="8102.9850746268648" y="-853.31807780320355"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6cS-v4-3n3">
@@ -1058,9 +1059,9 @@
                         <color key="selectedImageTintColor" name="AccentColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8uz-R8-LXG" kind="relationship" relationship="viewControllers" id="O9N-2g-4Jt"/>
-                        <segue destination="n4x-wJ-tjV" kind="relationship" relationship="viewControllers" id="XoG-el-bTM"/>
-                        <segue destination="eaL-Sz-DFP" kind="relationship" relationship="viewControllers" id="y9f-u5-hoK"/>
+                        <segue destination="Gum-Jt-RkP" kind="relationship" relationship="viewControllers" id="O9N-2g-4Jt"/>
+                        <segue destination="OVi-eh-u2d" kind="relationship" relationship="viewControllers" id="XoG-el-bTM"/>
+                        <segue destination="K2C-mD-XdM" kind="relationship" relationship="viewControllers" id="y9f-u5-hoK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYb-60-mxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1089,7 +1090,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elK-X3-Qzl">
-                                <rect key="frame" x="122" y="771" width="158" height="35"/>
+                                <rect key="frame" x="122" y="722" width="158" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="arrow.up.forward.app" catalog="system" title=" Get Tickets">
                                     <color key="baseBackgroundColor" name="AccentColor"/>
@@ -1154,7 +1155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sVQ-VA-Lit" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6423.8805970149251" y="-8.2379862700228834"/>
+            <point key="canvasLocation" x="7343.2835820895516" y="-8.2379862700228834"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8sZ-yW-K4y">
@@ -1173,6 +1174,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0q-OL-lwb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="858.20895522388059" y="-8.2379862700228834"/>
+        </scene>
+        <!--My Feed-->
+        <scene sceneID="PSh-Dj-SEI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K2C-mD-XdM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Feed" image="text.bubble.fill" catalog="system" selectedImage="text.bubble.fill" id="cMC-wO-RO4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pq3-Fl-hp4">
+                        <rect key="frame" x="0.0" y="124" width="402" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eaL-Sz-DFP" kind="relationship" relationship="rootViewController" id="eTC-xp-mdD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0pq-HP-6hh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5465.6716417910447" y="-852.63157894736833"/>
+        </scene>
+        <!--Nearby-->
+        <scene sceneID="afy-xQ-RF0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OVi-eh-u2d" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Nearby" image="mappin.and.ellipse" catalog="system" selectedImage="mappin.and.ellipse" id="NYL-fl-2ki"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JW2-H2-0w5">
+                        <rect key="frame" x="0.0" y="124" width="402" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="n4x-wJ-tjV" kind="relationship" relationship="rootViewController" id="f8B-5W-6CQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7g-bD-ucs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5467.1641791044776" y="-8.2379862700228834"/>
+        </scene>
+        <!--My Stuff-->
+        <scene sceneID="yAw-Kf-dn0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gum-Jt-RkP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Stuff" image="tray.fill" catalog="system" selectedImage="tray.fill" id="FFr-qR-6uC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Tg-ca-LcS">
+                        <rect key="frame" x="0.0" y="124" width="402" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8uz-R8-LXG" kind="relationship" relationship="rootViewController" id="Lxs-Kd-cxP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdd-Le-xpL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5465.6716417910447" y="780.54919908466809"/>
         </scene>
     </scenes>
     <resources>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewPostViewController: UIViewController {
+class NewPostViewController: UIViewController, MusicPickerDelegate {
     
     var selectedMusic: Music_fromJSON?
     
@@ -42,7 +42,11 @@ class NewPostViewController: UIViewController {
         
         // Determine post type based on whether music is attached
         if let music = selectedMusic {
-            newPost.post_type = "song" // or determine if album
+            if music.track_name != nil && !music.track_name!.isEmpty {
+                newPost.post_type = "song"
+            } else {
+                newPost.post_type = "album"
+            }
             newPost.music_ID = music.music_ID
         } else {
             newPost.post_type = "text"
@@ -71,28 +75,40 @@ class NewPostViewController: UIViewController {
     
     func updateMusicDisplay() {
         guard let music = selectedMusic else { return }
+        print("DEBUG: updateMusicDisplay called")
+        print("DEBUG: track_name = \(music.track_name ?? "unknown")")
         
         // Update the labels
         if let trackName = music.track_name, !trackName.isEmpty {
             // for songs
+            print("DEBUG: Setting song title to: \(trackName)")
             lbl_attachedMusicTitle.text = trackName
             lbl_attachedMusicSubtitle.text = music.album_name
         } else {
             // for lbums
+            print("DEBUG: Setting album title to: \(music.album_name)")
             lbl_attachedMusicTitle.text = music.album_name
             lbl_attachedMusicSubtitle.text = music.artist
         }
-        
+        print("DEBUG: Final label text = \(lbl_attachedMusicTitle.text ?? "nil")")
+
         // Update button to show album art instead of icon
         if let albumArtImage = UIImage(named: music.album_art_file) {
             btn_attachedMusicImage.setImage(albumArtImage, for: .normal)
             btn_attachedMusicImage.setTitle("", for: .normal)
         }
     }
-
+    
+    func didSelectMusic(_ music: Music_fromJSON) {
+        selectedMusic = music
+        updateMusicDisplay()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMusicPicker" {
-            // No need to pass anything, the picker will handle communication back
+            if let musicPickerVC = segue.destination as? MusicPickerViewController {
+                musicPickerVC.delegate = self
+            }
         }
     }
     

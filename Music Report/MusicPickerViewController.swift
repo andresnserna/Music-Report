@@ -7,13 +7,17 @@
 
 import UIKit
 
+protocol MusicPickerDelegate: AnyObject {
+    func didSelectMusic(_ music: Music_fromJSON)
+}
+
 class MusicPickerViewController: UITableViewController, UISearchBarDelegate {
 
     var allMusic = [Music_fromJSON]()
     var filteredMusic = [Music_fromJSON]()
     var isSearching = false
     
-    weak var delegate: NewPostViewController?
+    weak var delegate: MusicPickerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,40 +48,25 @@ class MusicPickerViewController: UITableViewController, UISearchBarDelegate {
         // Check if it's a song or album based on whether track_name exists
         if let trackName = music.track_name, !trackName.isEmpty {
             // It's a song
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath)
-            
-            if let imageView = cell.imageView {
-                imageView.image = UIImage(named: music.album_art_file)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as? SongCell else {
+                return UITableViewCell()
             }
-            cell.textLabel?.text = music.track_name
-            cell.detailTextLabel?.text = music.artist
-            
+            cell.configure(with: music)
             return cell
         } else {
             // It's an album
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath)
-            
-            if let imageView = cell.viewWithTag(100) as? UIImageView {
-                imageView.image = UIImage(named: music.album_art_file)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as? AlbumCell else {
+                return UITableViewCell()
             }
-            if let titleLabel = cell.viewWithTag(101) as? UILabel {
-                titleLabel.text = music.album_name
-            }
-            
+            cell.configure(with: music)
             return cell
         }
-   }
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedMusic = isSearching ? filteredMusic[indexPath.row] : allMusic[indexPath.row]
-        
-        // Pass the selected music back to NewPostViewController
-        if let newPostVC = presentingViewController as? UINavigationController,
-           let targetVC = newPostVC.viewControllers.last as? NewPostViewController {
-            targetVC.selectedMusic = selectedMusic
-            targetVC.updateMusicDisplay()
-        }
-        
+            
+        delegate?.didSelectMusic(selectedMusic)
         dismiss(animated: true, completion: nil)
     }
     

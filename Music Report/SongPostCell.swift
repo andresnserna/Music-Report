@@ -27,7 +27,11 @@ class SongPostCell: UITableViewCell {
         }
         
         if let music = Music {
-            lbl_songName.text = "\(music.track_name) - \(music.artist)"
+            if let trackName = music.track_name {
+                lbl_songName.text = "\(trackName) - \(music.artist)"
+            } else {
+                lbl_songName.text = music.album_name
+            }
             lbl_albumName.text = music.album_name
             img_albumArt.image = UIImage(named: music.album_art_file)
         }

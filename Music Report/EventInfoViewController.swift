@@ -50,7 +50,7 @@ class EventInfoViewController: UIViewController {
             print("Error grabbing event")
             return
         }
-        print("here is the event: \(event)")
+        //print("here is the event: \(event)")
         lbl_eventTitle.text = event.name
         lbl_eventAddress.text = event.address
         lbl_eventDate.text = event.date_START

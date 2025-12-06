@@ -493,7 +493,6 @@
     "track_genre": "Hip Hop",
     "album_art_file": "M-051.jpg",
     "in_library": true,
-    "play_count": 450
   },
   {
     "music_ID": "M-052",
@@ -510,7 +509,6 @@
     "track_genre": "Ambient",
     "album_art_file": "M-053.jpg",
     "in_library": true,
-    "play_count": 82
   },
   {
     "music_ID": "M-054",
@@ -519,7 +517,6 @@
     "track_genre": "Soul",
     "album_art_file": "M-054.jpg",
     "in_library": true,
-    "play_count": 112
   },
   {
     "music_ID": "M-055",
@@ -536,7 +533,6 @@
     "track_genre": "Post-Rock",
     "album_art_file": "M-056.jpg",
     "in_library": true,
-    "play_count": 24
   },
   {
     "music_ID": "M-057",
@@ -545,7 +541,6 @@
     "track_genre": "Hip Hop",
     "album_art_file": "M-057.jpg",
     "in_library": true,
-    "play_count": 365
   },
   {
     "music_ID": "M-058",
@@ -562,7 +557,6 @@
     "track_genre": "Post-Punk",
     "album_art_file": "M-059.jpg",
     "in_library": true,
-    "play_count": 198
   },
   {
     "music_ID": "M-060",
@@ -571,6 +565,5 @@
     "track_genre": "Folk",
     "album_art_file": "M-060.jpg",
     "in_library": true,
-    "play_count": 56
   }
 ]
