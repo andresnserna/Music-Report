@@ -40,9 +40,8 @@ struct Events_fromJSON: Codable {
 }
 
 func loadPosts() -> [Post_fromJSON] {
-    //MAKE SURE TO CHANGE THE RESOURCE NAME ONCE YOU FINALIZE THE POST DATABASE
-    guard let url = Bundle.main.url(forResource: "posts_TEST", withExtension: "json") else {
-        print("posts_TEST.json not found in app bundle")
+    guard let url = Bundle.main.url(forResource: "posts", withExtension: "json") else {
+        print("posts.json not found in app bundle")
         return []
     }
 
@@ -52,15 +51,15 @@ func loadPosts() -> [Post_fromJSON] {
         print("posts loaded successfully")
         return posts
     } catch {
-        print("Failed to decode posts_TEST.json: \(error)")
+        print("Failed to decode posts.json: \(error)")
         return []
     }
 }
 
 func loadMusic() -> [Music_fromJSON] {
     //MAKE SURE TO CHANGE THE RESOURCE NAME ONCE YOU FINALIZE THE POST DATABASE
-    guard let url = Bundle.main.url(forResource: "music_TEST", withExtension: "json") else {
-        print("music_TEST.json not found in app bundle")
+    guard let url = Bundle.main.url(forResource: "music", withExtension: "json") else {
+        print("music.json not found in app bundle")
         return []
     }
 
@@ -70,15 +69,15 @@ func loadMusic() -> [Music_fromJSON] {
         print("music loaded successfully")
         return music
     } catch {
-        print("Failed to decode music_TEST.json: \(error)")
+        print("Failed to decode music.json: \(error)")
         return []
     }
 }
 
 func loadEvents() -> [Events_fromJSON] {
     //MAKE SURE TO CHANGE THE RESOURCE NAME ONCE YOU FINALIZE THE POST DATABASE
-    guard let url = Bundle.main.url(forResource: "events_TEST", withExtension: "json") else {
-        print("events_TEST.json not found in app bundle")
+    guard let url = Bundle.main.url(forResource: "events", withExtension: "json") else {
+        print("events.json not found in app bundle")
         return []
     }
 
@@ -88,7 +87,7 @@ func loadEvents() -> [Events_fromJSON] {
         print("events loaded successfully")
         return events
     } catch {
-        print("Failed to decode events_TEST.json: \(error)")
+        print("Failed to decode events.json: \(error)")
         return []
     }
 }
