@@ -15,6 +15,6 @@ class SongCell: UITableViewCell {
     func configure(with music: Music_fromJSON) {
         lbl_songName.text = music.track_name
         lbl_artistName.text = music.artist
-        img_albumImage.image = UIImage(named: music.album_name)
+        img_albumImage.image = UIImage(named: music.album_art_file)
     }
 }

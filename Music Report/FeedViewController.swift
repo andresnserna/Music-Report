@@ -80,7 +80,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Set up table view
         tbl_postItems.dataSource = self
         tbl_postItems.delegate = self
-        tbl_postItems.estimatedRowHeight = 138 //height of post cell in the interface builder
+        //tbl_postItems.estimatedRowHeight = 138 //height of post cell in the interface builder
+        tbl_postItems.rowHeight = UITableView.automaticDimension  // make it automatic?
         
         // Load posts from JSON into Core Data (do this once)
         loadPostsFromJSON()
